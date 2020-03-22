@@ -1,0 +1,39 @@
+/* getting familiar with some CSS Properties */
+/* Suggested Website : 
+
+	https://css-tricks.com/almanac/ 
+	paletton.com -> for RGB color
+	*/
+
+
+/* parent tags get on top of their children*/
+body {
+	/*background-image: url(https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-mini-witb-201810_FMT_WHH?wid=564&hei=744&fmt=png-alpha&qlt=80&.v=1540491479387)*/
+	/*Also able to link : background-image: url(backgroundImg.jpg);*/
+	 background-image: url(apple.png);
+	/* the image is downloaded from : https://unsplash.com/@taisiia_shestopal */
+	
+	background-size : cover;
+	/*to auto align the picture in it's normal size according to browser size*/
+	 
+	 
+}
+
+h2 {
+	/*color: red ;   -> Predefined */ 
+	/*color : #AABB90; -> Hex form */
+	color: rgb(192,168,128); 
+	/*RGB (A,B,C) | 0 <= A,B,C <= 255     0 -> White | 255 -> Black*/
+	text-align: center ;
+	border : 5px solid purple;
+	cursor : progress;
+	/* style of the cursor when we hover over this header*/
+}
+
+li {
+	list-style: none ;
+	/*removes the dots next to the text*/
+	display : inline-block;
+	/* we wanna make sure that the list items in one 1 next to each other -> look at "home" "about" "login"*/
+
+}
