@@ -1,0 +1,24 @@
+/*
+Selector {
+
+	Property : Value ;
+}
+
+*/
+
+/* Ctrl + / => Commenting a Line (or multiple) line(s) of code */
+/* we Connect the CSS and HTML files by a <link> tag written in <head> of HTML File. */
+/* Cascading Style Sheets -> Cascading means it always considers the selector closer to the end. */
+h2 {
+	color: red ;
+	background-color: black ;
+}
+
+p {
+	color: pink ;
+}
+
+/* since CSS is cascading, it considers the last selector. */
+p {
+	color: green ;
+}
