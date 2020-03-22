@@ -1,0 +1,71 @@
+/* getting familiar with some CSS Properties */
+/* Suggested Website : 
+
+	https://css-tricks.com/almanac/ 
+	paletton.com -> for RGB color
+	*/
+
+
+/* by "*" we are implying that every text should be aligned to right.*/
+*{
+	text-align: right ;
+}
+
+/* parent tags get on top of their children*/
+body {
+	/*background-image: url(https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-mini-witb-201810_FMT_WHH?wid=564&hei=744&fmt=png-alpha&qlt=80&.v=1540491479387)*/
+	/*Also able to link : background-image: url(backgroundImg.jpg);*/
+	 background-image: url(apple.png);
+	/* the image is downloaded from : https://unsplash.com/@taisiia_shestopal */
+	
+	background-size : cover;
+	/*to auto align the picture in it's normal size according to browser size*/
+	 
+	 
+}
+/* we can apply multiple tags to a selector style with comma*/
+
+h2,p{
+	/*color: red ;   -> Predefined */ 
+	/*color : #AABB90; -> Hex form */
+	/*color: rgba(192,168,128,0.2) ; 
+		the last Number is transparency from 0 to 1
+	*/ 
+	color: rgb(192,168,128); 
+	/*RGB (A,B,C) | 0 <= A,B,C <= 255     0 -> White | 255 -> Black*/
+	text-align: center ;
+	border : 5px solid purple;
+	cursor : progress;
+	/* style of the cursor when we hover over this header*/
+}
+
+li {
+	list-style: none ;
+	/*removes the dots next to the text*/
+	display : inline-block;
+	/* we wanna make sure that the list items in one 1 next to each other -> look at "home" "about" "login"*/
+
+}
+/* this is how we style a Class in our HTML */
+.WebText {
+	border : 5px dashed green;
+	color : rgb(25,44,136);
+}
+/* we use # before the ID name to call the element by ID.*/
+#div1{
+	background-color: rgba(0,0,45,0.2);
+}
+
+/* this space means for all "P"s that are inside h2 do the following style.*/
+
+h3 p {
+	color: rgba(97,97,255,0.2);
+	text-align: left;
+}
+/* hover means nothing happens unless we hover our mouse over it.*/
+h4 :hover{
+	color:green;
+	background-color: rgba(0,6,80,0.2);
+	margin: 9px solid dashed ;
+
+}

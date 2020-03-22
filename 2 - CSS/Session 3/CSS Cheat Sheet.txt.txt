@@ -1,0 +1,34 @@
+Copy Right : Udemy.Complete Web Developer in 2018. Zero to Mastery 
+CSS Cheat Sheet
+
+Reference:
+*https://www.w3schools.com/cssref/css_selectors.asp
+*https://css-tricks.com/almanac/
+
+Cascading Style Sheets at the most basic level it indicates that the order of CSS rules matter. 
+
+
+.class
+#id
+*
+element :
+	the simple normal form.
+element, elemen	:
+	apply the style to both types of elements.
+element1 element2 :
+	all element2's that are inside of element1 ( element1 is their parent or grandparent or even higher in the hierarchy)
+element1 > element2 :
+	all element2's that element1 is their direct parent ( not grandparent )
+element + element :
+	h2 + p : select any p element that is exactly after h2 element
+
+:hover
+:last-child
+:first-child
+!important (not recommended)
+
+
+What seletors win out in the cascade depends on:
+-Specificity -> search for online specifity Calculator.
+-Importance
+-Source Order
