@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- We habe a <form> tag to make a form -->
+	<form method="POST">
+		First Name : <input type="text" name="inputFirstName" ><br>
+		
+		Last Name : <input type="text" name="inputLastName"><br>
+		<!-- EMAIL -->
+		Email: <input type="email"  name="inputEmail"  required><br>
+		<!-- PASSWORD -->
+		Password : <input type="Password" min="5" name="inputPassword"  required><br>
+
+		Birthday : <input type="date" name="inputBirthday" ><br>
+		
+		<!-- GENDER -->
+		Gender : <br>
+			<input type="radio" name="genderRDB" value="Male" > Male <br>
+			<input type="radio" name="genderRDB" value="Female"> Female <br>
+			<input type="radio" name="genderRDB" value="Other"> Other <br>
+
+		<!-- ANIMAL -->
+		Animal/Pets : <br>
+			<input type="checkbox" name="animalCat" > Cat <br>
+			<input type="checkbox" name="animalDog"> Dog <br>
+			<input type="checkbox" name="animalWolf"> Wolf <br>
+		
+		<!-- CARS -->
+		Cars : <br>
+			<!-- <select multiple > -->
+			<select name = "cars">
+				<option value="Benz"  > Benz </option>
+				<option value="BMW"  > BMW </option>
+				<option value="Audi"  > Audi </option>
+				<option value="Peykan"  > Peykan </option>
+
+			</select>
+
+		<!-- Automatically Creates a button as submit button -->
+		<input type="submit" value="Register">
+		<!-- Automatically Creates a button as reset button -->
+		<input type="reset">
+	</form>
+
+</body>
+</html>
+
+		<!-- "required" on Line "EMAIL" :  doesn't allow this field to be empty when we click the submit button -->
+		
+		<!-- we can also set the type for the Email "text" but that's not neat -->
+
+		<!-- in Section GENDER : we use "name" attribute to let the radio button be aware of each others existence so that only one of them can be chosen at a time-->
+
+
+		<!-- in ANIMAL section : the type of the inputs is "checkbox" so that we can choose more than one animal as our pet -->
+
+		<!-- in CARS section : in order to make a sidebar menu we should use the "select" tag in this tag can have multiple "option"s to be selected, we can allow the user to choose multiple items by adding a "multiple" attribute in the opening tag of "select"  -->
+
+		<!-- In PASSWORD section : we can use a "min" attribute to set the minimum number of letters the user can enter as his/her password -->
+
+		<!-- Each tag has a "name" attribute so that when we are entering some information, this name attribute will be used to categorize our info while sending the data to the backend. 
+		we don't give "name" to each item of sidebar;instead we give the "select" tag a "name" attribute and each item a "value" attribute -->
+
+		<!-- we can use an attribute called "method" in the <form> attribute to contain the data in the body of the request instead of sending it in the link above the page. -->
+		<!-- -->
+
+		<!-- 
+		** If we Use POST method : **
+
+		file:///G:/GitRepositories/8th%20Semester/Web%20Tutorial/Session%208/registerForm.html 
+
+		**   if we don't use POST Method : "?" means we are starting to send data from now on **
+
+		file:///G:/GitRepositories/8th%20Semester/Web%20Tutorial/Session%208/registerForm.html
+		?
+		inputFirstName=hossein
+		&inputLastName=dgh
+		&inputEmail=hossein%40gmail.com
+		&inputPassword=dfdfdfdf
+		&inputBirthday=2020-03-02
+		&genderRDB=Male
+		&animalWolf=on
+		&animalCat=on
+		&cars=Audi
+	-->
+
+
