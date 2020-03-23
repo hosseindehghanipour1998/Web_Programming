@@ -1,0 +1,68 @@
+
+
+body {
+
+	 background-image: url(apple.png);	
+	background-size : cover;	 
+}
+
+
+p{
+
+	/* Here is new :*/
+	/*text-transform: :line-through;*/
+	text-transform: :uppercase;
+	/*the space between lines*/
+	line-height: 20px ; 
+	font-style: italic;
+	/* a number between 100 - 900 or simply writing bold */
+	font-weight: 800;
+	font-size: 150%;
+	
+	/* FONTS */
+
+	/* ============1. =========================*/
+	/*font-family: Georgia ;*/
+
+	/*=============== 2 ===============*/
+	/*font-family: "Times New Roman",Georgia ;*/
+	/* if the laptop doesn't have "Times New Roman" get go ahead with Georgia*/
+
+
+	/*================= 3 ======================*/
+	font-family: 'Oswald', sans-serif;
+	/* how to use an swesome font even if the user doesn't have that font , sees it ?
+	Answer : Google Font;
+			we load the link to that font and import it by anchor tag in our index head.
+			if you notice, in google font there is also a "Specify in CSS" which means you have to copy and paste this piece of code in your CSS file.
+	For Example :
+		https://fonts.google.com/?selection.family=Oswald
+	*/
+	/* by doing this we are making our website a little bit slow.*/
+}
+
+li {
+	list-style: none ;
+	display : inline-block;
+}
+
+.WebText {
+	border : 5px dashed green;
+	color : rgb(25,44,136);
+}
+
+#div1{
+	background-color: rgba(0,0,45,0.2);
+}
+
+
+h3 p {
+	color: rgba(97,97,255,0.2);
+	text-align: left;
+}
+
+h4 :hover{
+	color:green;
+	background-color: rgba(0,6,80,0.2);
+	margin: 9px solid dashed ;
+}
