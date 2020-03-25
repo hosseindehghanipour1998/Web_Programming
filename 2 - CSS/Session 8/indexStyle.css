@@ -1,0 +1,31 @@
+/*Using FlexBox*/
+.container {
+	/* Activate FlexBox*/
+	display: flex ;
+	/* By Using the Site :*/
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+h1 {
+	font-family: fantasy;
+	/*font-size: 3em;*/
+	border-bottom: 2px solid pink ;
+	border-right: 2px solid pink;
+	width: 400px ;
+	text-align: center;
+}
+
+
+img {
+	width: 450px;
+	height: 300px;
+	margin: 10px ;	
+}
+
+
+
+ /* 	FLEX BOX     */
+/* Visit "https://css-tricks.com/" for nicer FlexBoxes */
+/* in order to get better in FlexBox : http://flexboxfroggy.com/ */
