@@ -1,0 +1,56 @@
+
+
+body {
+
+	 background-image: url(apple.png);	
+	background-size : cover;	 
+}
+
+
+p{
+
+	text-transform: :uppercase;
+	line-height: 20px ; 
+	font-style: italic;
+	font-weight: 800;
+	font-size: 150%;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+li {
+	list-style: none ;
+	display : inline-block;
+}
+
+.WebText {
+	border : 5px dashed green;
+	color : rgb(25,44,136);
+}
+
+#div1{
+	background-color: rgba(0,0,45,0.2);
+}
+
+
+h3 p {
+	color: rgba(97,97,255,0.2);
+	text-align: left;
+}
+
+h4 :hover{
+	color:green;
+	background-color: rgba(0,6,80,0.2);
+	margin: 9px solid dashed ;
+}
+/* this part is new .*/
+img{
+	width: 200x;
+	height: 200px ;
+	float: right;
+}
+
+footer {
+	/* makes sure that footer always remains at the down side odf the web page*/
+	clear: both ;
+}
