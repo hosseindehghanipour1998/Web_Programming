@@ -1,2 +1,0 @@
-Create a Robot with the Given Files that dances while you hover your mouse over it.
-For Better Understanding of the problem you can only open the index.html in the solution section.
