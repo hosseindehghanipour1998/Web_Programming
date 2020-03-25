@@ -1,0 +1,31 @@
+h2 {
+	background-color: pink;
+	color: red ;
+}
+
+.boxModel {
+	border : 5px solid red;
+	display: inline-block;
+	/* ============ PADDING ===============*/
+	/*padding: 20px ;*/
+	/*Top Right Bottom Right -> clock Wise*/
+	padding: 5px 20px 5px 20px ; 
+
+	/*============ MARGIN =========*/
+	/*margin: 20px;*/
+	/*margin: 0px 20px 0px 20px ; The same as below line of code*/
+	margin: : 0px 20px;
+	/* we can even give height and width option too.*/
+
+}
+
+.contextLorem {
+	font-size: 10px;
+	/* now change the font size to 30 and see what happens base on the "2em" we have set below*/
+}
+
+span {
+	/*em simply means we want the font size to be equal to five times the font size of the containing element.*/
+	/*This simply gives us the ability to change the font size of the rest of the text and this size also changes .*/
+	font-size: 2em;
+}
