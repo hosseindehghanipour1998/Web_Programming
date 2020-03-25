@@ -1,0 +1,35 @@
+
+.container {
+	display: flex ;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+h1 {
+	font-family: fantasy;
+	border-bottom: 2px solid pink ;
+	border-right: 2px solid pink;
+	width: 400px ;
+	text-align: center;
+	/* gives a shadow to the header*/
+	box-shadow: 4px 4px 5px #888888 ;
+	margin-top: 10px ;
+}
+
+
+img {
+	width: 450px;
+	height: 300px;
+	margin: 10px ;	
+	/* Takes 1s for the image to scale */
+	transition: all 1s;
+}
+.container:hover{
+	/* the maginfying scale that the picture magnifies.*/
+	transform: scale(2.1);
+}
+
+/* https://caniuse.com/#comparison => this website allows us to realize wether we
+can use a specific selector or attribute use in different web browsers.*/
+
