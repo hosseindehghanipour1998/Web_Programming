@@ -1,0 +1,55 @@
+body {
+	background-image: url("backgroundImage.jpg") ;
+	/*background-attachment: fixed;*/
+	/*background-position: center center;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+div {
+	margin: 10px;
+	font-family: "Times New Roman";
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+}
+/*.container {
+	text-transform: capitalize;
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+  	overflow: hidden;
+
+}
+.row {
+	font-family: "Times New Roman";
+	font-size: 1.5em ;
+	color: white;
+
+  	height: 40vh;
+}
+
+.column2 {
+	align-self: center;
+}
+*/
+
+.btn , .sentence {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.sentence {
+	
+	font-size: 1.5em ;
+	color: white;
+  	flex-wrap: wrap;  	
+  	height: 40vh;
+}
+
+
+
+
