@@ -9,6 +9,89 @@
 
 */
 
+/* 
+ ============= SESSION 1 =================
+*/
+// This shows a window on the top of the page telling us " I Love Javascript"
+alert("I Love Javascript.") ;
+
+// +/- Operators
+5 * 3 ;//  15
+
+5 ** 3 ; // Power Opearot -> 5^3 = 125
+
+10 / 2 ; // 5
+
+5 + 8 ; //  13
+
+5 - 8  ;// -3
+
+"Hello Wolrd" ; // a string but not assigned to anything
+
+"Hello " + "World !" ; // "Hello World !" -> Concats the Strings
+
+5 + "05" ; // "505" -> Concats as Strings
+
+5 - "4" ; // 5 - 4 = 1 -> subtracts as Integers
+
+10 % 5 ; // 0
+
+5 % 10 ; // 5
+
+" " + " " ; // "  "
+
+" " + 0  ; // " 0"
+
+true + true ; // 2 -> considers "true" as 1
+
+true + false ; // 1 -> considers "fasle" as 0
+
+false + true ; // 1
+
+false - true ; // 0 - 1 = -1
+
+"bob" - "bill" ; // NaN
+
+// Comparisons : >= , <= , == , === , != , < , >  
+
+5 >= 1 ; // true
+
+0 === 1 ; // false
+
+4 <= 1 ; // false
+
+1 != 1 ; // false
+
+"A" > "B" ; // false
+
+"B" < "C" ; // true -> based on ASCII Code
+
+"a" > "A" ; // true
+
+"b" < "A" ; // false
+
+true === false ; // true 
+
+true != true ; // false 
+
+// Question : What's the difference between == and === ?
+/*
+# == (Double equals operator): Known as the equality or abstract comparison operator
+# === (Triple equals operator): Known as the identity or strict comparison operator.
+# == converts the variable values to the same type before performing comparison. This is called type coercion.
+# === does not do any type conversion (coercion) and returns true only if both values and types are identical for the two variables being compared.
+# If we forget ";"" at the end of the line, in most of the times the code works but we may face some bugs and errors in rare situation. ";" is crucial to have an error-free code.
+
+*/
+var one = 1;
+var one_again = 1;
+var one_string = "1";  // note: this is string
+
+console.log(one ==  one_again);  // true
+console.log(one === one_again);  // true
+console.log(one ==  one_string); // true. See below for explanation.
+console.log(one === one_string); // false. See below for explanation.
+
 
 
 
