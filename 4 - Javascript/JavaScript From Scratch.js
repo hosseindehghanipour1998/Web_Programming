@@ -124,6 +124,45 @@ alert(strOrNumber);
 
 // *******
 
+//================================ SESSION 3 ======================
+// Control Flow.
+// # just like anyother programming language.
+
+var myName = "Billy" ;
+var herName = "Susan";
+
+if ( myName === herName ){
+	alert("Same Names :) ");
+}
+//*****
+
+if ( myName === "Nilan" ){
+	alert("Hi Nilan. ");
+}
+else if ( myName === "Delaram"){
+	alert("Hi Delaram.");
+}
+else {
+	alert("Nice to meet you " + myName) ;
+}
+//******
+// "===" operator
+ var userName, password ;
+ userName = "John" ;
+ password = "Wick" ;
+
+ if ( userName === "John" && password === "Wick") {
+ 	alert("Successful Login !");
+ }
+ // *******
+ // "!" operator
+
+ if ( !(userName === "John") ) {
+ 	alert("Access Denied !");
+ }
+
+ // *********
+
 
 
  
