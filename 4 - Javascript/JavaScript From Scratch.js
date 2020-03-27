@@ -92,6 +92,41 @@ console.log(one === one_again);  // true
 console.log(one ==  one_string); // true. See below for explanation.
 console.log(one === one_string); // false. See below for explanation.
 
+// ==================== SESSION 2 ==========================
+// VARIABLES
+// Types : 	undefined , Null , Object , Symbol ( new in ECMAScript 6).
+/*
+# variable names can't start with a number but ot can end with numebrs.
+# names can start with "letter" or "_" or "$"
+# we write names in camelCase standard.
+# varibales are decribed with keyword "var"
+# If the varibale is empty ( not assigned) , an "undefined" message will show up below the variable while running in the web console.
+*/
+
+// *********
+
+prompt() ; // opens a text field above the web window and writes down what ever you type in
+
+prompt("Enter Username") ; // does the same thing as above with the difference that it shows us a message " Enter Username "
+
+// ********
+var firstNumber = prompt("Enter First Number "); // returns a String -> what you type in
+var secondNumber = prompt("Enter Second Number ") ;
+var sum = Number(firstNumber) + Number(secondNumber) ; // Number() casts a String to int -> "0" -> 0  or "125" -> 125
+alert("The Sum is " + sum) ;// alert() shows a popup as alert field.
+// ********
+// JS is a Dynamic Language : Like Python
+
+var strOrNumber = " This is a String ";
+alert(strOrNumber) ;
+strOrNumber = 12 ;
+alert(strOrNumber);
+
+// *******
+
+
+
+ 
 
 
 
