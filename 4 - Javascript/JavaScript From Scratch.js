@@ -214,8 +214,28 @@ function operatorX(x , y){
 	return func(x,y);
 }
 
+// ============================= Session 5 ======================
+// Switch Case :
 
+var grade = 'B' ;
 
+switch(grade){
+
+	case 'A':
+		document.write("Good job getting a \'A\'");
+		break;
+
+	case 'B':
+		document.write("You can do better Next time.");
+		break;
+
+	case 'F':
+		document.write("Never Give Up. You Failed !");
+		break;
+
+	default :
+		document.write("Not Bad ... Not Good");
+}
 
 
 
