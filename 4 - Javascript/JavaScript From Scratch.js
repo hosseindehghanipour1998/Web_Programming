@@ -271,7 +271,7 @@ document.write ("Exiting from the loop!");
 // *************
 
 // ======================= Session 7 =========================
-// Loop Control:
+// Flow Control:
 /*
 	Reference of the Codes & Descriptions used in this session :
 	https://www.tutorialspoint.com/javascript/javascript_loop_control.htm
