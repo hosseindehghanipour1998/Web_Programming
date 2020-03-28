@@ -447,7 +447,6 @@ document.getElementById("demo").innerHTML = mycar.cnam;
 
 var list = null ;
 
-// ***************
-
-
+// ==================== Session 10 ==================
+// End of JS Basics.
 
