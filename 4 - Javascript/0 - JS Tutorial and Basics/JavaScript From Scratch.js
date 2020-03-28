@@ -361,13 +361,93 @@ list.sort();
 Visit for more Methods on Lists : 
 	tutorialspoint.com/javascript/javascript_builtin_functions.htm
 */
+  
+  // ================== Session 9 ==================================
+  // Data Structures -> Objects.  
+/*
+A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword "class", and the properties are assigned inside a "constructor()" method.
+
+*/
+
+// *********** Class Definition
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+}
+// Methods
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return "I have a " + this.carname;
+  }
+}
+
+mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = mycar.present();
+
+//  ************ Static Methods
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+mycar = new Car("Ford");
+
+//Call 'hello()' on the class Car:
+document.getElementById("demo").innerHTML = Car.hello();
+
+// ************ Inheritance
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = mycar.show() ;
  
+// *************** Getters and Setters
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;
+  }
+}
 
+mycar = new Car("Ford");
 
+document.getElementById("demo").innerHTML = mycar.cnam;
 
- 
+// *************** Null Objects
 
+var list = null ;
 
+// ***************
 
 
 
