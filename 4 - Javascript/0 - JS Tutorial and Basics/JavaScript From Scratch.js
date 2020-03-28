@@ -321,6 +321,46 @@ outerloop:        // This is the label name
 	}        
 document.write("Exiting the loop!<br /> ");
 
+// ======================= Session 8 ================================
+// Arrays
+
+//Arrays are zero indexed
+var animals = ["tiger" , "cat" , "lion" , "bird"];
+console.log(animals[1]); // gets "cat"
+for( animal in animals ){
+	cosole.log(animal); // returns the index of items -> animal is the index
+}
+
+// ****** array of Functions ******
+
+
+var mathFunctions = [
+	function add(a,b){
+		return a+b ;
+	},
+	function sub(a,b){
+		return a-b;
+	}
+]
+
+// ******** Array of Mixed Things ****
+
+var mixedList = ["apple" , 2 , 35 , "hiiii" , ["seed","soil","breeze"]];
+cosole.log(mixedList[4][0]);
+
+// **** arrays methods ****
+var List = ["tiger" , "cat" , "bird" , "bear"];
+list.shift(); // -> removes "tiger" from the list
+list.pop(); // -> pops and returns the last item of the array
+list.push("Elephant");
+clear(); // clears the page
+list = list.concat(["bee","deer","shark"]); // concats to the end of the list
+list.length();
+list.sort();
+/*
+Visit for more Methods on Lists : 
+	tutorialspoint.com/javascript/javascript_builtin_functions.htm
+*/
 
 
 
