@@ -237,9 +237,38 @@ switch(grade){
 		document.write("Not Bad ... Not Good");
 }
 
+// ======================== Session 6 ========================
+// Loops :
+//************* "while" Loop
+var counter = 0 ;
+while ( counter < 10 ){
+	console.log("Number:("+counter+")\n");
+	counter ++ ;
+}
 
+// ************** "do-while" Loop
+counter = 0 ;
 
+do{
+	console.log("Number:("+counter+")\n");
+	counter ++ ;
+}while(counter < 10);
 
+// ************* "for" Loop
+for ( count = 0 ; count < 10 ; count++){
+	document.write("Current Count : " + count );
+	document.write("<br />");
+}
+// ************* "for-each" Loop
+var aProperty;
+document.write("Navigator Object Properties<br /> ");
+// navigator is an Object -> we'll get to that later.
+for (aProperty in navigator){
+	document.write(aProperty);
+	document.write("<br />");
+}
+document.write ("Exiting from the loop!");
+// *************
 
 
 
