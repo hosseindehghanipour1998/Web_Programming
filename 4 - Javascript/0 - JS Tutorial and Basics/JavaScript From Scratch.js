@@ -163,6 +163,166 @@ else {
 
  // *********
 
+ // ==================== Session 4 ===========================
+// FUNCTIONS
+/*
+function <functionName> (<passing Parameters>){
+	statements ;
+}
+*/
+
+function sayHello ( name , age ){
+	document.write("My Name is : " + name + " I am " + age + " Years Old.");
+	//  Document function writes whatever you give it on a webpage.
+}
+
+//  ********
+
+function concatenate(first , last){
+	return (first + last);
+}
+
+// *******
+
+/* <ctrl + shift + />  */
+// <ctrl + />
+
+//*********
+/* In HTML file , each <input> tag has a "onclick" attribute that you can pass the name of the wanted function to it to operate as you wish the form do with the input data */
+// ***********
+
+// Nested Functions :
+
+function nestedFunction(a,b){
+	function square(x){ return x*x ;}
+	function squareRoot(x) { return Math.sqrt(x) ;}
+	var summation = square(a) + square(b) ;
+	var sqrtOfSummation = squareRoot(summation);
+	return (sqrtOfSummation);
+}
+
+//**************
+// Function Constructor : 
+/*
+The Function() constructor expects any number of string arguments. The last
+argument is the body of the function – it can contain arbitrary JavaScript
+statements, separated from each other by semicolons.
+*/
+// In JS you can pass a function to a parameter which is also called " Pass-by-Reference."
+var func = new Function ( "x" , "y" , "return x + y ;");
+function operatorX(x , y){
+	return func(x,y);
+}
+
+// ============================= Session 5 ======================
+// Switch Case :
+
+var grade = 'B' ;
+
+switch(grade){
+
+	case 'A':
+		document.write("Good job getting a \'A\'");
+		break;
+
+	case 'B':
+		document.write("You can do better Next time.");
+		break;
+
+	case 'F':
+		document.write("Never Give Up. You Failed !");
+		break;
+
+	default :
+		document.write("Not Bad ... Not Good");
+}
+
+// ======================== Session 6 ========================
+// Loops :
+//************* "while" Loop
+var counter = 0 ;
+while ( counter < 10 ){
+	console.log("Number:("+counter+")\n");
+	counter ++ ;
+}
+
+// ************** "do-while" Loop
+counter = 0 ;
+
+do{
+	console.log("Number:("+counter+")\n");
+	counter ++ ;
+}while(counter < 10);
+
+// ************* "for" Loop
+for ( count = 0 ; count < 10 ; count++){
+	document.write("Current Count : " + count );
+	document.write("<br />");
+}
+// ************* "for-each" Loop
+var aProperty;
+document.write("Navigator Object Properties<br /> ");
+// navigator is an Object -> we'll get to that later.
+for (aProperty in navigator){
+	document.write(aProperty);
+	document.write("<br />");
+}
+document.write ("Exiting from the loop!");
+// *************
+
+// ======================= Session 7 =========================
+// Flow Control:
+/*
+	Reference of the Codes & Descriptions used in this session :
+	https://www.tutorialspoint.com/javascript/javascript_loop_control.htm
+*/
+// *********************** Break 
+document.write("Entering the loop<br /> ");
+while (x < 20){
+	if (x == 5){
+		break; // breaks out of loop completely
+	}
+	x = x + 1;
+	document.write( x + "<br />");
+}
+// *********************** Continue
+
+var x = 1;
+document.write("Entering the loop<br /> ");
+
+while (x < 10) {
+   x = x + 1;
+   
+   if (x == 5) {
+      continue;   // skip rest of the loop body
+   }
+   document.write( x + "<br />");
+}         
+document.write("Exiting the loop!<br /> ");
+//************************ Labels
+/*
+Starting from JavaScript 1.2, a label can be used with break and continue to
+control the flow more precisely. A label is simply an identifier followed by a
+colon (:) that is applied to a statement or a block of code. We will see two
+different examples to understand how to use labels with break and continue.
+
+*/
+document.write("Entering the loop!<br /> ");
+outerloop:        // This is the label name         
+	for (var i = 0; i < 5; i++) {
+	   document.write("Outerloop: " + i + "<br />");
+	   innerloop:
+		   for (var j = 0; j < 5; j++) {
+		      if (j > 3 ) break ;           // Quit the innermost loop
+		      if (i == 2) break innerloop;  // Do the same thing
+		      if (i == 4) break outerloop;  // Quit the outer loop
+		      document.write("Innerloop: " + j + " <br />");
+		   }
+	}        
+document.write("Exiting the loop!<br /> ");
+
+
+
 
 
  
