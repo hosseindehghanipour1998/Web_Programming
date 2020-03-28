@@ -163,6 +163,66 @@ else {
 
  // *********
 
+ // ==================== Session 4 ===========================
+// FUNCTIONS
+/*
+function <functionName> (<passing Parameters>){
+	statements ;
+}
+*/
+
+function sayHello ( name , age ){
+	document.write("My Name is : " + name + " I am " + age + " Years Old.");
+	//  Document function writes whatever you give it on a webpage.
+}
+
+//  ********
+
+function concatenate(first , last){
+	return (first + last);
+}
+
+// *******
+
+/* <ctrl + shift + />  */
+// <ctrl + />
+
+//*********
+/* In HTML file , each <input> tag has a "onclick" attribute that you can pass the name of the wanted function to it to operate as you wish the form do with the input data */
+// ***********
+
+// Nested Functions :
+
+function nestedFunction(a,b){
+	function square(x){ return x*x ;}
+	function squareRoot(x) { return Math.sqrt(x) ;}
+	var summation = square(a) + square(b) ;
+	var sqrtOfSummation = squareRoot(summation);
+	return (sqrtOfSummation);
+}
+
+//**************
+// Function Constructor : 
+/*
+The Function() constructor expects any number of string arguments. The last
+argument is the body of the function – it can contain arbitrary JavaScript
+statements, separated from each other by semicolons.
+*/
+// In JS you can pass a function to a parameter which is also called " Pass-by-Reference."
+var func = new Function ( "x" , "y" , "return x + y ;");
+function operatorX(x , y){
+	return func(x,y);
+}
+
+
+
+
+
+
+
+
+
+
 
 
  
