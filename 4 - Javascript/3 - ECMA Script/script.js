@@ -120,3 +120,44 @@ const reduceArray = array.reduce((accumulator,num) => {
 
 },0); // this "0" is the initial amount of accumulator
 
+
+// ======================= Advanced Objects ==================
+// reference Type ,  instantiation
+
+[] === [] ; // false -> 2 different pointers are being compared.
+
+// References :
+var obj1 = {value : 10 };
+var obj2 = obj1 ;
+obj2.value = 15 ;
+console.log(obj1.value);
+
+// ***** instantiation *****
+class Player {
+
+	constructor(firstName , lastName , age , height){
+		this.firstName = firstName ;
+		this.lastName = lastName ;
+		this.age = age ;
+		this.height = height ;
+	}
+	introduce(){
+		console.log(`Name : ${firstName} - ${lastName} | Age : ${age} | Height : ${height} `);
+	}
+}
+
+class Wizard extends Player {
+	constructor(power , firstName , lastName , age , height){
+		super(firstName , lastName , age , height);
+		this.power = power ;
+	}
+	play(){
+		console.log("Weeeeeeeeeee");
+	}
+}
+
+const wizard1 = new Wizard ( "Guns","John" , "Wick" , 25 , 180 );
+const wizard2 = new Wizard ( "Knives","James" , "Bond" , 40 , 165 );
+
+// ====================================================================
+
