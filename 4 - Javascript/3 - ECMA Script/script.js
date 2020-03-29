@@ -93,4 +93,30 @@ console.log(multiply5(2)); // 5 * 2 = 10
 // ***************
 // Composite Functions
 const compose = (f,g) => (a) => f(g(a)) ;
- 
+
+// =================== Advanced Arrays ==================
+// Filtering
+const array = [ 1 , 2 , 10 , 16 ];
+const doubleValues = [] ;
+const newArray = array.forEach( (num => { doubleValues.push(num * 2 ) ;}))
+console.log(doubleValues);
+
+// *********************************
+// Map
+ const mapArray = array.map((num) => {
+ 	return (num * 2) ;
+ })
+ console.log(mapArray);
+ // foreach only iterates on the elements but map expects to return sth.
+// *********************************
+// Filter
+const filterArray = array.filter( num => num < 5 && num > 3 );
+console.log(filterArray);
+// *********************************
+//reduce
+const reduceArray = array.reduce((accumulator,num) => {
+	// accumulator is sth that can store the info that happens in the function.
+	return ( accumulator + num );
+
+},0); // this "0" is the initial amount of accumulator
+
