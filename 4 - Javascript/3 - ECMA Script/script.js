@@ -159,5 +159,39 @@ class Wizard extends Player {
 const wizard1 = new Wizard ( "Guns","John" , "Wick" , 25 , 180 );
 const wizard2 = new Wizard ( "Knives","James" , "Bond" , 40 , 165 );
 
-// ====================================================================
+// ================================================
+// Padding
+'Turtle'.padStart(10); // '          Tutrtle' -> 10 spaces.
+'Turtle'.padEnd(5); // 'Turtle     ' -> 5 spaces.
+
+// Objects
+let newObj = {
+	username0 : 'santa',
+	username1 : 'Rudolf',
+	username2 : 'Mr.Grinch'
+};
+// Sometimes working with servers we may receive these unwilling objects
+
+Object.keys(newObj).forEach( (key,index ) => {
+	console.log(key , newObj[key]);
+});
+
+
+Object.values(newObj).forEach( value => {
+	console.log(value);
+});
+
+Object.entries(newObj).forEach( value => {
+	console.log(value);
+});
+
+Object.entries(newObj).map(value => {
+	return ( value[1] + value[0].replace('username',''));
+	// [ "santa0" , "Rudolf1" , "Mr.Grinch2"]
+})
+
+// ============= Now Jump To excercises at the end of this section ======
+
+
+
 
