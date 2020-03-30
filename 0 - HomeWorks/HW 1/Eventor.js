@@ -33,7 +33,14 @@ class Eventor {
 	fire(){}
 
 	//3
-	countListeners(){}
+	countListeners(eventName){
+		let chosenEvents = new Array();
+		this.chain.forEach(item => {
+			if(item.getEventName() === eventName ){
+				chosenEvents.add(item);
+			}
+		});
+	}
 
 	//4
 	off(){}
