@@ -18,8 +18,11 @@ class EventListener {
 		return this.eventName ;
 	}
 
-	get getEeventStatus(){
+	get getEventStatus(){
 		return this.status ;
+	}
+	get getEventListener(){
+		return this.listener ;
 	}
 
 }
@@ -79,7 +82,13 @@ class Eventor {
 	}
 
 	//7
-	removeListener(){}
+	removeListener(eventName , eventListener){
+		for(let i = 0 ; i < this.chain.length ; i++ ){
+			if( (chain[i].getEventName() === eventName) && (chain[i].getEventListener() === eventListener ) ){
+				this.chain.splice(i,1);
+			}
+		}
+	}
 
 	//8
 	countListeners(){}
