@@ -61,7 +61,13 @@ class Eventor {
 	}
 
 	//5
-	on(){}
+	on(eventName){
+		this.chain.forEach(item => {
+			if(item.getEventName() === eventName ) {
+				item.setStatus(Status.OFF);
+			}
+		});
+	}
 
 	//6
 	removeEvent(){}
