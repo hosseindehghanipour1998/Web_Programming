@@ -10,6 +10,12 @@ class EventListener {
 		this.status = status ;
 	}
 
+	showInfo(){
+		let string = "[" + this.eventName + "]-[" + this.listener + "]-[" + this.status + "]";
+		console.log(string);
+		//return string ;
+	}
+
 	set setStatus(activationStatus){
 		this.status = activationStatus ;
 	}
@@ -106,6 +112,13 @@ class Eventor {
 		return chosenListeners ;
 	}
 
+	showInfo(){
+		this.chain.forEach(item => {
+			item.getEventName ;
+		});
+	}
+
+
 
 }
 
@@ -121,7 +134,7 @@ function main(){
 	const multiply = (a,b) => { return (a*b);};
 	const power = (a,b) => {return a**b ;};
 
-	// Instantiation
+	// Instantiation 
 	let eventor = new Eventor();
 	eventor.addListener("onclick" , showLog);
 	eventor.addListener("hover" , clearWindow);
@@ -133,8 +146,10 @@ function main(){
 	eventor.addListener("dbclick" , multiply); 
 
 
-	// Testing : 
-
-
+	/* TESTING GROUND  */
+	// Test addListener :
+	eventor.chain.forEach(item =>{
+		item.showInfo();
+	});
 
 }
