@@ -49,15 +49,28 @@ class Eventor {
 	//2
 	fire(){}
 
-	//3
-	countListeners(eventName){
-		let chosenCounter =  0;
-		this.chain.forEach(item => {
-			if(item.getEventName === eventName ){
-				chosenCounter++ ;
-			}
-		});
-		return chosenCounter ;
+
+	//3 & 8
+	countListeners(){
+		if(arguments[0] === undefined ){
+			// No arguments passed to the function.
+			return this.chain.length ;
+		}
+
+		else if (  (arguments.length === 1) && (typeof(arguments[0]) === "string") ){
+			let eventName = arguments[0] ;
+			let chosenCounter =  0;
+			this.chain.forEach(item => {
+				if(item.getEventName === eventName ){
+					chosenCounter++ ;
+				}
+			});
+			return chosenCounter ;
+		}
+
+		else {
+			console.log("arguments are not passed Correctly")
+		}
 	}
 
 	//4
@@ -96,10 +109,7 @@ class Eventor {
 		}
 	}
 
-	//8
-	countListeners(){
-		return this.chain.length ;
-	}
+
 
 	//9
 	listeners(eventName){
@@ -153,6 +163,8 @@ function main(){
 		item.showInfo();
 	});
 
-	//Test : countListeners(eventName) 
+	//Test : countListeners(eventName) &  countListeners()
 	console.log("OnClink Listeners : " + eventor.countListeners("onclick") );
+	console.log("OnClink Listeners : " + eventor.countListeners() );
+	console.log("OnClink Listeners : " + eventor.countListeners("hover") );
 }
