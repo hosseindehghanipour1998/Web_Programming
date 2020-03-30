@@ -130,7 +130,10 @@ function main(){
 	eventor.addListener("onclick" , sum);
 	eventor.addListener("onclick" , clearWindow);
 	eventor.addListener("hover" , power);
-	eventor.addListener("dbclick" , multiply);
+	eventor.addListener("dbclick" , multiply); 
+
+
+	// Testing : 
 
 
 
