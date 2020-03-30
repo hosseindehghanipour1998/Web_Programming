@@ -1,6 +1,6 @@
 var Status = {
-	ON : 1 ,
-	OFF : 0
+	ON : "on" ,
+	OFF : "off"
 }
 
 class EventListener {
@@ -77,7 +77,7 @@ class Eventor {
 	off(eventName){
 		this.chain.forEach(item => {
 			if(item.getEventName === eventName ) {
-				item.setStatus(Status.OFF);
+				item.setStatus = Status.OFF ;
 			}
 		});
 	}
@@ -86,7 +86,7 @@ class Eventor {
 	on(eventName){
 		this.chain.forEach(item => {
 			if(item.getEventName === eventName ) {
-				item.setStatus(Status.ON);
+				item.setStatus = Status.ON ;
 			}
 		});
 	}
@@ -122,10 +122,10 @@ class Eventor {
 		return chosenListeners ;
 	}
 
-	showInfo(){
-		this.chain.forEach(item => {
-			item.getEventName ;
-		});
+	printAllEventsAndListeners(){
+		this.chain.forEach(item =>{
+			item.showInfo();
+	});
 	}
 
 
@@ -154,17 +154,27 @@ function main(){
 	eventor.addListener("onclick" , clearWindow);
 	eventor.addListener("hover" , power);
 	eventor.addListener("dbclick" , multiply); 
+	eventor.addListener("dbclick" , sum);
+	eventor.addListener("dbclick" , clearWindow);
+	eventor.addListener("dbclick" , showLog);
+
 
 
 	/* TESTING GROUND  */
 
 	// Test addListener :
-	eventor.chain.forEach(item =>{
-		item.showInfo();
-	});
+	eventor.printAllEventsAndListeners();
 
 	//Test : countListeners(eventName) &  countListeners()
-	console.log("OnClink Listeners : " + eventor.countListeners("onclick") );
-	console.log("OnClink Listeners : " + eventor.countListeners() );
-	console.log("OnClink Listeners : " + eventor.countListeners("hover") );
+	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
+	console.log("All Listeners : " + eventor.countListeners() );
+	console.log("hover Listeners : " + eventor.countListeners("hover") );
+
+	// Test : off(eventName) && on(eventName)
+	eventor.off("dbclick");
+	eventor.off("onclick");
+	eventor.on("dbclick");
+	eventor.printAllEventsAndListeners();
+
+
 }
