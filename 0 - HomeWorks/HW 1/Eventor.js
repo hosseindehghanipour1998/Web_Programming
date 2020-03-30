@@ -1,8 +1,19 @@
 class EventListener {
-	constructor(eventName , listener){
+	constructor(eventName , listener , status = "on"){
 		this.eventName = eventName ;
 		this.listener = listener ;
+		this.status = status ;
 	}
+
+	set status(activationStatus){
+		this.status = activationStatus ;
+	}
+
+	get eventName(){
+		return this.eventName ;
+	}
+
+
 }
 
 class Eventor {
