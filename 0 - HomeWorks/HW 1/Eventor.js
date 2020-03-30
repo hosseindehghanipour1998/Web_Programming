@@ -1,18 +1,26 @@
+var Status = {
+	ON : 1 ,
+	OFF : 0
+}
+
 class EventListener {
-	constructor(eventName , listener , status = "on"){
+	constructor(eventName , listener , status = Status.ON ){
 		this.eventName = eventName ;
 		this.listener = listener ;
 		this.status = status ;
 	}
 
-	set status(activationStatus){
+	set setStatus(activationStatus){
 		this.status = activationStatus ;
 	}
 
-	get eventName(){
+	get getEventName(){
 		return this.eventName ;
 	}
 
+	get getEeventStatus(){
+		return this.status ;
+	}
 
 }
 
@@ -34,16 +42,23 @@ class Eventor {
 
 	//3
 	countListeners(eventName){
-		let chosenEvents = new Array();
+		let chosenCounter =  0;
 		this.chain.forEach(item => {
 			if(item.getEventName() === eventName ){
-				chosenEvents.add(item);
+				chosenCounter++ ;
 			}
 		});
+		return chosenCounter ;
 	}
 
 	//4
-	off(){}
+	off(eventName){
+		this.chain.forEach(item => {
+			if(item.getEventName() === eventName ) {
+				item.setStatus(Status.OFF);
+			}
+		});
+	}
 
 	//5
 	on(){}
@@ -63,12 +78,6 @@ class Eventor {
 
 }
 
-class EventListener {
-	constructor(eventName , listener){
-		this.eventName = eventName ;
-		this.listener = listener ;
-	}
-}
 
 
 function main(){
