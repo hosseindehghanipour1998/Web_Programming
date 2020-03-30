@@ -40,7 +40,7 @@ class Eventor {
 		this.chain = new Array();
 	}
 	
-	//1
+	//1 
 	addListener(eventType , callingFunction){
 		let newEventListener = new EventListener(eventType , callingFunction) ;
 		this.chain.push(newEventListener);
@@ -147,9 +147,12 @@ function main(){
 
 
 	/* TESTING GROUND  */
+
 	// Test addListener :
 	eventor.chain.forEach(item =>{
 		item.showInfo();
 	});
 
+	//Test : countListeners(eventName) 
+	console.log("OnClink Listeners : " + eventor.countListeners("onclick") );
 }
