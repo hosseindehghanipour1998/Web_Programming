@@ -47,7 +47,7 @@ class Eventor {
 	countListeners(eventName){
 		let chosenCounter =  0;
 		this.chain.forEach(item => {
-			if(item.getEventName() === eventName ){
+			if(item.getEventName === eventName ){
 				chosenCounter++ ;
 			}
 		});
@@ -57,7 +57,7 @@ class Eventor {
 	//4
 	off(eventName){
 		this.chain.forEach(item => {
-			if(item.getEventName() === eventName ) {
+			if(item.getEventName === eventName ) {
 				item.setStatus(Status.OFF);
 			}
 		});
@@ -66,7 +66,7 @@ class Eventor {
 	//5
 	on(eventName){
 		this.chain.forEach(item => {
-			if(item.getEventName() === eventName ) {
+			if(item.getEventName === eventName ) {
 				item.setStatus(Status.ON);
 			}
 		});
@@ -75,7 +75,7 @@ class Eventor {
 	//6
 	removeEvent(eventName){
 		for(let i = 0 ; i < this.chain.length ; i++){
-			if (chain[i].getEventName() === eventName ){
+			if (chain[i].getEventName === eventName ){
 				this.chain.splice(i,1); // removes the item at index "i" from the list "chain"
 			}
 		}
@@ -84,17 +84,27 @@ class Eventor {
 	//7
 	removeListener(eventName , eventListener){
 		for(let i = 0 ; i < this.chain.length ; i++ ){
-			if( (chain[i].getEventName() === eventName) && (chain[i].getEventListener() === eventListener ) ){
+			if( (chain[i].getEventName === eventName) && (chain[i].getEventListener() === eventListener ) ){
 				this.chain.splice(i,1);
 			}
 		}
 	}
 
 	//8
-	countListeners(){}
+	countListeners(){
+		return this.chain.length ;
+	}
 
 	//9
-	listeners(){}
+	listeners(eventName){
+		let chosenListeners = new Array();
+		this.chain.forEach(item => {
+			if(item.getEventName === eventName ){
+				chosenListeners.push(item.getEventListener);
+			}
+		});
+		return chosenListeners ;
+	}
 
 
 }
