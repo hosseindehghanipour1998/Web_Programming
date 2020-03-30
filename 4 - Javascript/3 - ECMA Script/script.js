@@ -192,6 +192,16 @@ Object.entries(newObj).map(value => {
 
 // ============= Now Jump To excercises at the end of this section ======
 
+// ======= Debugger =======
+const flattened = [ [0,1] , [2,3] , [4,5]].reduce(
+	(accumulator,array) => {
+		debugger ;
+		return [].concat([0,1]);
+	}
+	);
 
+	// when we run the code, the execution would be stopped at the code we have "debugger" and by 
+	//pushing the <enter> key we can run the code step by step after that line of code.
+	
 
 
