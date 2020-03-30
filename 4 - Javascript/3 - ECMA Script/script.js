@@ -190,7 +190,7 @@ Object.entries(newObj).map(value => {
 	// [ "santa0" , "Rudolf1" , "Mr.Grinch2"]
 })
 
-// ============= Now Jump To excercises at the end of this section ======
+// ======= Now Jump To excercises at the end of this section ======
 
 // ======= Debugger =======
 const flattened = [ [0,1] , [2,3] , [4,5]].reduce(
@@ -202,6 +202,31 @@ const flattened = [ [0,1] , [2,3] , [4,5]].reduce(
 
 	// when we run the code, the execution would be stopped at the code we have "debugger" and by 
 	//pushing the <enter> key we can run the code step by step after that line of code.
-	
 
+// ==========================
+// JS is a Single Threaded Language that can be non-blocking.
+
+/* 
+Search for these :
+	call stack
+	web API
+	Callback Queue
+	Event Loop
+in JS.
+	# Timeout block provided by API
+*/
+
+/*
+	Synchronous : Request & Wait
+	Asynchronous : Request & Do your work. -> wait for CallBack() by API.
+
+*/
+/*
+	When does Asynch become neede ?
+		# Requesting to DB 
+		# Image Processing
+		# Reading Files
+		# Try to talk to Machines
+
+*/
 
