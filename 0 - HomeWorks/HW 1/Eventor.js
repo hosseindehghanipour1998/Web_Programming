@@ -28,7 +28,7 @@ class Eventor {
 		let newEventListener = new EventListener(eventType , callingFunction) ;
 		this.chain.push(newEventListener);
 	}
-	
+
 	//2
 	fire(){}
 
@@ -68,4 +68,30 @@ class EventListener {
 		this.eventName = eventName ;
 		this.listener = listener ;
 	}
+}
+
+
+function main(){
+
+	// Specimen Functions for testing : 
+	const showLog = (string) => {console.log(string);};
+	const clearWindow = () => {clear();};
+	const sum = (a,b) => { return (a + b) ;};
+	const sub = (a,b) => { return (a-b);};
+	const multiply = (a,b) => { return (a*b);};
+	const power = (a,b) => {return a**b ;};
+
+	// Instantiation
+	let eventor = new Eventor();
+	eventor.addListener("onclick" , showLog);
+	eventor.addListener("hover" , clearWindow);
+	eventor.addListener("hover" , sum);
+	eventor.addListener("hover" , multiply);
+	eventor.addListener("onclick" , sum);
+	eventor.addListener("onclick" , clearWindow);
+	eventor.addListener("hover" , power);
+	eventor.addListener("dbclick" , multiply);
+
+
+
 }
