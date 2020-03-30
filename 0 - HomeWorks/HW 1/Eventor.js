@@ -64,13 +64,19 @@ class Eventor {
 	on(eventName){
 		this.chain.forEach(item => {
 			if(item.getEventName() === eventName ) {
-				item.setStatus(Status.OFF);
+				item.setStatus(Status.ON);
 			}
 		});
 	}
 
 	//6
-	removeEvent(){}
+	removeEvent(eventName){
+		for(let i = 0 ; i < this.chain.length ; i++){
+			if (chain[i].getEventName() === eventName ){
+				this.chain.splice(i,1); // removes the item at index "i" from the list "chain"
+			}
+		}
+	}
 
 	//7
 	removeListener(){}
