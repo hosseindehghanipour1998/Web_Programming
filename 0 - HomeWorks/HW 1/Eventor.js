@@ -11,7 +11,8 @@ class EventListener {
 	}
 
 	showInfo(){
-		let string = "[" + this.eventName + "]-[" + this.listener + "]-[" + this.status + "]";
+		//let string = "[" + this.eventName + "]-[" + this.listener + "]-[" + this.status + "]";
+		let string = `Event Name : [${this.eventName}] - Status : [${this.listener}] - Function : [${this.status}]`;
 		console.log(string);
 		//return string ;
 	}
@@ -98,16 +99,18 @@ class Eventor {
 				this.chain.splice(i,1); // removes the item at index "i" from the list "chain"
 				continue ;
 			}
-			i++;
+			i++; // iterate the array while deleting , manually and you will understand why I did this.
 		}
 	}
 
 	//7
 	removeListener(eventName , eventListener){
-		for(let i = 0 ; i < this.chain.length ; i++ ){
-			if( (chain[i].getEventName === eventName) && (chain[i].getEventListener() === eventListener ) ){
+		for(let i = 0 ; i < this.chain.length ;  ){
+			if( (this.chain[i].getEventName === eventName) && (this.chain[i].getEventListener === eventListener ) ){
 				this.chain.splice(i,1);
+				continue ;
 			}
+			i++; // iterate the array while deleting , manually and you will understand why I did this.
 		}
 	}
 
@@ -185,6 +188,23 @@ function main(){
 	eventor.removeEvent("hover");
 	eventor.printAllEventsAndListeners();
 	console.log("=================================================");
+
+	//Test : removeListener(eventName , eventListener)
+	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
+	eventor.removeListener("onclick",clearWindow); // exists in implementation
+	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
+
+	console.log("dbclick Listeners : " + eventor.countListeners("dbclick") );
+	eventor.removeListener("dbclick",clearWindow); // exists in implementation
+	console.log("dbclick Listeners : " + eventor.countListeners("dbclick") );
+
+
+	console.log("hover Listeners : " + eventor.countListeners("hover") );
+	eventor.removeListener("dbclick",clearWindow); // doesn't exist in implementation
+	console.log("hover Listeners : " + eventor.countListeners("hover") );
+
+
+
 
 
 }
