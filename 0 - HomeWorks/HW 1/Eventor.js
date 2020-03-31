@@ -93,10 +93,12 @@ class Eventor {
 
 	//6
 	removeEvent(eventName){
-		for(let i = 0 ; i < this.chain.length ; i++){
-			if (chain[i].getEventName === eventName ){
+		for(let i = 0 ; i < this.chain.length ; ){
+			if (this.chain[i].getEventName === eventName ){
 				this.chain.splice(i,1); // removes the item at index "i" from the list "chain"
+				continue ;
 			}
+			i++;
 		}
 	}
 
@@ -164,17 +166,25 @@ function main(){
 
 	// Test addListener :
 	eventor.printAllEventsAndListeners();
+	console.log("=================================================");
 
 	//Test : countListeners(eventName) &  countListeners()
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
 	console.log("All Listeners : " + eventor.countListeners() );
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
+	console.log("=================================================");
 
 	// Test : off(eventName) && on(eventName)
 	eventor.off("dbclick");
 	eventor.off("onclick");
 	eventor.on("dbclick");
 	eventor.printAllEventsAndListeners();
+	console.log("=================================================");
+
+	// Test : removeEvent(eventName)
+	eventor.removeEvent("hover");
+	eventor.printAllEventsAndListeners();
+	console.log("=================================================");
 
 
 }
