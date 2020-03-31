@@ -139,6 +139,12 @@ class Eventor {
 }
 
 
+function printArray(arr){
+	arr.forEach(item => {
+		console.log(item);
+	})
+}
+
 
 function main(){
 
@@ -163,6 +169,13 @@ function main(){
 	eventor.addListener("dbclick" , sum);
 	eventor.addListener("dbclick" , clearWindow);
 	eventor.addListener("dbclick" , showLog);
+
+	eventor.addListener("onmouseover" , showLog); 
+	eventor.addListener("onmouseover" , clearWindow);
+	eventor.addListener("onmouseover" , sum);
+	eventor.addListener("onmouseover" , sub);
+	eventor.addListener("onmouseover" , multiply); 
+	eventor.addListener("onmouseover" , power);
 
 
 
@@ -209,7 +222,17 @@ function main(){
 
 
 	// Test : Listeners(eventName)
-	eventor.listeners("onclick");
+	console.log("onmouseover Listeners : ")
+	let onmouseoverListeners = eventor.listeners("onmouseover");
+	printArray(onmouseoverListeners);
+	console.log("#############");
 
-
+	console.log("OnClick Listeners : ")
+	let onclickListeners = eventor.listeners("onclick");
+	printArray(onclickListeners);
+	console.log("=================================================");
 }
+
+
+//Run The Tests
+main();
