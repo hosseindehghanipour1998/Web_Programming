@@ -4,6 +4,7 @@ var Status = {
 }
 
 class EventListener {
+	// Each event has a Name and a Listener.
 	constructor(eventName , listener , status = Status.ON ){
 		this.eventName = eventName ;
 		this.listener = listener ;
@@ -38,7 +39,7 @@ class Eventor {
 
 	//0
 	constructor(){
-		this.chain = new Array();
+		this.chain = new Array(); // creating an array of EventListener
 	}
 	
 	//1 
@@ -189,22 +190,26 @@ function main(){
 	eventor.printAllEventsAndListeners();
 	console.log("=================================================");
 
-	//Test : removeListener(eventName , eventListener)
+	// Test : removeListener(eventName , eventListener)
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
 	eventor.removeListener("onclick",clearWindow); // exists in implementation
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
+	console.log("#############");
 
 	console.log("dbclick Listeners : " + eventor.countListeners("dbclick") );
 	eventor.removeListener("dbclick",clearWindow); // exists in implementation
 	console.log("dbclick Listeners : " + eventor.countListeners("dbclick") );
+	console.log("#############");
 
 
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
 	eventor.removeListener("dbclick",clearWindow); // doesn't exist in implementation
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
+	console.log("=================================================");
 
 
-
+	// Test : Listeners(eventName)
+	eventor.listeners("onclick");
 
 
 }
