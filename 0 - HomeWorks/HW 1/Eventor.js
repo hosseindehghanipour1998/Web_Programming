@@ -105,7 +105,7 @@ class Eventor {
 	removeEvent(eventName){
 		for(let i = 0 ; i < this.chain.length ; ){
 			if (this.chain[i].getEventName === eventName ){
-				this.chain.splice(i,1); // removes the item at index "i" from the list "chain"
+				this.chain.slice(i,1); // removes the item at index "i" from the list "chain"
 				continue ;
 			}
 			i++; // iterate the array while deleting , manually and you will understand why I did this.
@@ -166,12 +166,12 @@ function main(){
 
 	// Instantiation 
 	let eventor = new Eventor();
-	eventor.addListener("onclick" , showLog);
+	eventor.addListener("onclick" , clearWindow);
 	eventor.addListener("hover" , clearWindow);
 	eventor.addListener("hover" , sum);
 	eventor.addListener("hover" , multiply);
 	eventor.addListener("onclick" , sum);
-	eventor.addListener("onclick" , clearWindow);
+	eventor.addListener("onclick" , showLog);
 	eventor.addListener("hover" , power);
 	eventor.addListener("dbclick" , multiply); 
 	eventor.addListener("dbclick" , sum);
@@ -238,6 +238,13 @@ function main(){
 	console.log("OnClick Listeners : ")
 	let onclickListeners = eventor.listeners("onclick");
 	printArray(onclickListeners);
+	console.log("=================================================");
+
+
+	//Test : Fire(eventName , args )
+	console.log("Testing Fire() ");
+	eventor.fire("onclick",2,3,4);
+	eventor.fire("hover",5,2);
 	console.log("=================================================");
 }
 
