@@ -160,7 +160,7 @@ function main(){
 
 	// Specimen Functions for testing : 
 	const showLog = (string) => {console.log(string);};
-	const clearWindow = () => {clear();};
+	const clearWindow = () => {clear();console.log("clear() function called.")};
 	const sum = (a,b) => { return (a + b) ;};
 	const sub = (a,b) => { return (a-b);};
 	const multiply = (a,b) => { return (a*b);};
@@ -174,6 +174,7 @@ function main(){
 	eventor.addListener("hover" , multiply);
 	eventor.addListener("onclick" , sum);
 	eventor.addListener("onclick" , sub);
+	eventor.addListener("onclick" , clearWindow);
 	eventor.addListener("hover" , power);
 	eventor.addListener("dbclick" , multiply); 
 	eventor.addListener("dbclick" , sum);
@@ -191,7 +192,7 @@ function main(){
 
 	/* TESTING GROUND  */
 
-	// Test addListener :
+	// Test addListener : 
 	eventor.printAllEventsAndListeners();
 	console.log("=================================================");
 
@@ -226,7 +227,7 @@ function main(){
 
 
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
-	eventor.removeListener("dbclick",clearWindow); // doesn't exist in implementation
+	eventor.removeListener("hover",clearWindow); // doesn't exist in implementation
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
 	console.log("=================================================");
 
