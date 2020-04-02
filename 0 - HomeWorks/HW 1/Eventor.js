@@ -49,7 +49,15 @@ class Eventor {
 	}
 
 	//2
-	fire(){}
+	fire(eventName){
+		let passedArguments = arguments.slice(1,arguments.length);
+		let gatheredListeners  = this.listeners(eventName);
+		gatheredListeners.forEach(item => {
+			let result = item(passedArguments);
+			console.log(result);
+		})
+
+	}
 
 
 	//3 & 8
