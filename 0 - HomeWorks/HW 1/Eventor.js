@@ -105,24 +105,29 @@ class Eventor {
 
 	//6
 	removeEvent(eventName){
-		for(let i = 0 ; i < this.chain.length ; ){
-			if (this.chain[i].getEventName === eventName ){
-				this.chain.slice(i,1); // removes the item at index "i" from the list "chain"
-				continue ;
+		
+		let newEventsArray = []
+		this.chain.forEach(item => {
+			
+			if ( item.getEventName != eventName ) {
+				newEventsArray.push(item);
 			}
-			i++; // iterate the array while deleting , manually and you will understand why I did this.
-		}
+		});
+		this.chain = newEventsArray ;
 	}
 
 	//7
 	removeListener(eventName , eventListener){
-		for(let i = 0 ; i < this.chain.length ;  ){
-			if( (this.chain[i].getEventName === eventName) && (this.chain[i].getEventListener === eventListener ) ){
-				this.chain.splice(i,1);
-				continue ;
+		let newArray = [] ;
+
+		this.chain.forEach(item => {
+
+			if ( (item.getEventName != eventName) || (item.getEventListener != eventListener ) ){
+				newArray.push(item);
 			}
-			i++; // iterate the array while deleting , manually and you will understand why I did this.
-		}
+		})
+		this.chain = newArray ;
+
 	}
 
 
@@ -210,7 +215,9 @@ function main(){
 	console.log("=================================================");
 
 	// Test : removeEvent(eventName)
-	eventor.removeEvent("hover");
+	eventor.printAllEventsAndListeners();
+	eventor.removeEvent("dbclick");
+	console.log("*****************************");
 	eventor.printAllEventsAndListeners();
 	console.log("=================================================");
 
@@ -245,8 +252,11 @@ function main(){
 
 
 	//Test : Fire(eventName , args )
+
 	console.log("Testing Fire() ");
+	console.log("OnClick Ouput : ");
 	eventor.fire("onclick",2,3,4);
+	console.log("Hover Ouput : ");
 	eventor.fire("hover",5,2);
 	console.log("=================================================");
 }
