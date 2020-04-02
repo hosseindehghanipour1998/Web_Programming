@@ -49,13 +49,15 @@ class Eventor {
 	}
 
 	//2
-	fire(eventName){
-		let passedArguments = arguments.slice(1,arguments.length);
+	fire(eventName,...rest){
+		let passedArguments = [];
+		for (let arg of rest) {
+        	passedArguments.push(arg);
+      	}
 		let gatheredListeners  = this.listeners(eventName);
-		gatheredListeners.forEach(item => {
-			let result = item(passedArguments);
-			console.log(result);
-		})
+		for ( let i = 0 ; i < gatheredListeners.length ; i++){
+			console.log(gatheredListeners[i](...passedArguments));
+		}
 
 	}
 
@@ -166,12 +168,12 @@ function main(){
 
 	// Instantiation 
 	let eventor = new Eventor();
-	eventor.addListener("onclick" , clearWindow);
-	eventor.addListener("hover" , clearWindow);
+	eventor.addListener("onclick" , power);
+	eventor.addListener("hover" , sub);
 	eventor.addListener("hover" , sum);
 	eventor.addListener("hover" , multiply);
 	eventor.addListener("onclick" , sum);
-	eventor.addListener("onclick" , showLog);
+	eventor.addListener("onclick" , sub);
 	eventor.addListener("hover" , power);
 	eventor.addListener("dbclick" , multiply); 
 	eventor.addListener("dbclick" , sum);
