@@ -148,9 +148,6 @@ class Eventor {
 			item.showInfo();
 	});
 	}
-
-
-
 }
 
 
@@ -180,6 +177,7 @@ function main(){
 	eventor.addListener("onclick" , sum);
 	eventor.addListener("onclick" , sub);
 	eventor.addListener("onclick" , clearWindow);
+	eventor.addListener("hover" , clearWindow);
 	eventor.addListener("hover" , power);
 	eventor.addListener("dbclick" , multiply); 
 	eventor.addListener("dbclick" , sum);
@@ -202,12 +200,14 @@ function main(){
 	console.log("=================================================");
 
 	//Test : countListeners(eventName) &  countListeners()
+	console.log("Test : countListeners(eventName) &  countListeners()");
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
 	console.log("All Listeners : " + eventor.countListeners() );
 	console.log("hover Listeners : " + eventor.countListeners("hover") );
 	console.log("=================================================");
 
 	// Test : off(eventName) && on(eventName)
+	console.log("Test : off(eventName) && on(eventName)");
 	eventor.off("dbclick");
 	eventor.off("onclick");
 	eventor.on("dbclick");
@@ -215,6 +215,7 @@ function main(){
 	console.log("=================================================");
 
 	// Test : removeEvent(eventName)
+	console.log("Test : removeEvent(eventName)");
 	eventor.printAllEventsAndListeners();
 	eventor.removeEvent("dbclick");
 	console.log("*****************************");
@@ -222,6 +223,7 @@ function main(){
 	console.log("=================================================");
 
 	// Test : removeListener(eventName , eventListener)
+	console.log("Test : removeListener(eventName , eventListener)");
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
 	eventor.removeListener("onclick",clearWindow); // exists in implementation
 	console.log("OnClick Listeners : " + eventor.countListeners("onclick") );
@@ -240,6 +242,7 @@ function main(){
 
 
 	// Test : Listeners(eventName)
+	console.log("Test : Listeners(eventName)");
 	console.log("onmouseover Listeners : ")
 	let onmouseoverListeners = eventor.listeners("onmouseover");
 	printArray(onmouseoverListeners);
@@ -252,7 +255,6 @@ function main(){
 
 
 	//Test : Fire(eventName , args )
-
 	console.log("Testing Fire() ");
 	console.log("OnClick Ouput : ");
 	eventor.fire("onclick",2,3,4);
