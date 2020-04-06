@@ -11,6 +11,6 @@
   - ***Yarn*** is a tool that helps us grabbing the required files from _NPM Registry_.
 
 # Three Types of Packages :
-  1. Packages you can use on your ***browser*** that help you in _front-end_ like : _JQuery_
+  1. Packages you can use on your ***browser*** that help you in ***front-end*** like : "_JQuery_"
   2. Once you can use in ***Backend*** like _Node JS_.
   3. Some commands used in ***Command Line***.
