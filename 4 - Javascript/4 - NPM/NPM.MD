@@ -17,11 +17,11 @@
 
 # How to set up NPM on our Computer ?
   1. We Need to download the latest _"Node JS"_ package and install it.
-    - You can download it from [HERE](https://nodejs.org/en/download/).
+    You can download it from [HERE](https://nodejs.org/en/download/).
   2. After Downloading and Installing _Node JS_ go to _Terminal_ and write: `npm -v` to see the version Number of the _Node JS_.
-    - By the time I'm Writing this document, the latest version for _NPM_ is _6.13_
+    By the time I'm Writing this document, the latest version for _NPM_ is _6.13_
   3. Do the same for _Node JS_ by writing `node -v`.
-    - In order to install the latest version of _NPM_ by _Terminal_ you can simply write : `npm install npm@latest -g`.
+    In order to install the latest version of _NPM_ by _Terminal_ you can simply write : `npm install npm@latest -g`.
   4. Every time you are going to start a project, open terminal in the directory of your project and simply write `npm init`. This command creates a _JSON_ file for the package you are willing to add to your project.
 
 # What is Node JS?
