@@ -37,7 +37,7 @@
   npm install -l package-name
   npm install -g package name
   ```
-    - `-g` and `-l` refer  to **Globally** and  **locally** installation respectively.
+  - `-g` and `-l` refer  to **Globally** and  **locally** installation respectively.
   - If you ran into a _Permission Denied_ error, switch to **Administrator** terminal ( on _Windows_ ) or run the command with **sudo** privilege ( on _Linux Based_ systems ).
 
   - ***Live Server*** acts as a fake server we use to test out project. (Install it globally.)
