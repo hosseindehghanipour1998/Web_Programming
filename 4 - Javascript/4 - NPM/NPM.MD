@@ -35,9 +35,9 @@
   - We can install any package using this command :
   ```
   npm install -l package-name
-  npm install -g package name
+  npm install -g package-name
   ```
-  - `-g` and `-l` refer  to **Globally** and  **locally** installation respectively.
+  - `-g` and `-l` refer  to **Globally** and  **Locally** installation respectively.
   - If you ran into a _Permission Denied_ error, switch to **Administrator** terminal ( on _Windows_ ) or run the command with **sudo** privilege ( on _Linux Based_ systems ).
 
   - ***Live Server*** acts as a fake server we use to test out project. (Install it globally.)
@@ -46,3 +46,4 @@
     - `npm install -l lodash`
   - How to use a lodash function in our script ?
     - write this code above your _.js_ file : `import {function-name} from 'lodash'`
+    - If you faced any error, that's because of the way we must import the modules in _JS_.
