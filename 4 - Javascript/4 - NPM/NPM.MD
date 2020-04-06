@@ -24,8 +24,25 @@
     - In order to install the latest version of _NPM_ by _Terminal_ you can simply write : `npm install npm@latest -g`.
   4. Every time you are going to start a project, open terminal in the directory of your project and simply write `npm init`. This command creates a _JSON_ file for the package you are willing to add to your project.
 
-
-
 # What is Node JS?
   - In simple concise terms, ***Node JS*** is what allows us to run _Java Script_ code outside a _Browser Console_.
   - For more information you can visit [Wikipedia](https://en.wikipedia.org/wiki/Node.js).
+
+### Lodash & Live-server packages :
+  - we can install any package in two types :
+    - ***Locally*** : You can only use the package in your project directory.
+    - ***Globally*** : You can use the package **anywhere** on your computer such as **Terminal**.
+  - We can install any package using this command :
+  ```
+  npm install -l package-name
+  npm install -g package name
+  ```
+    - `-g` and `-l` refer  to **Globally** and  **locally** installation respectively.
+  - If you ran into a _Permission Denied_ error, switch to **Administrator** terminal ( on _Windows_ ) or run the command with **sudo** privilege ( on _Linux Based_ systems ).
+
+  - ***Live Server*** acts as a fake server we use to test out project. (Install it globally.)
+    - `npm install -g live-server`
+  - ***Lodash*** provides us lots of functions and methods that exterminates our needs in writing them from scratch.(Install this locally.)
+    - `npm install -l lodash`
+  - How to use a lodash function in our script ?
+    - write this code above your _.js_ file : `import {function-name} from 'lodash'`
