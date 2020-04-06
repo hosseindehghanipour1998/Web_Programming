@@ -50,7 +50,7 @@
     - There is also a package called [***Browserify***](http://browserify.org/). Read about it in [Wikipedia](https://en.wikipedia.org/wiki/Browserify).
 
 # Don't Import All files
-there is no need to import all files of _Node Js_ in your repository. All you need is the _Package.Json_ file attached to the project in order to bring the needed functionality.
+There is no need to import all files of _Node Js_ in your repository. All you need is the _Package.Json_ file attached to the project in order to bring the needed functionality.
 
 # Dev. Dependency :
 The packages that are **Only** used by the _Developers_ to _run and test_ the projects **Locally** and they get omitted while pushing our project automatically.
