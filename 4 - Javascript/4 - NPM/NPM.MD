@@ -47,3 +47,12 @@
   - How to use a lodash function in our script ?
     - write this code above your _.js_ file : `import {function-name} from 'lodash'`
     - If you faced any error, that's because of the way we must import the modules in _JS_.
+    - There is also a package called [***Browserify***](http://browserify.org/). Read about it in[Wikipedia](https://en.wikipedia.org/wiki/Browserify).
+
+# Don't Import All files
+there is no need to import all files of _Node Js_ in your repository. All you need is the _Package.Json_ file attached to the project in order to bring the needed functionality.
+
+# Dev. Dependency :
+The packages that are **Only** used by the _Developers_ to _run and test_ the projects **Locally** and they get omitted while pushing our project automatically.
+
+- We can write a `<scripts>`block in out _Package.json_ in order to make some functionalities automated by the system and leave the pressure from the programmer.
