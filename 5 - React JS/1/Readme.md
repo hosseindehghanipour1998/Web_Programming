@@ -18,7 +18,7 @@ which would create the project you want at the current directory you are in righ
 If we go to _package.json_ we can see that a few tags have been written down there.
 
 Let's start describing each one. Simply type  ` npm start ` and check the opened browser for us. This what you should see on the opened browser:
-<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/start.PNG" height="500" width="500" align="middle">
+<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/start.PNG" height="800" width="1000" align="middle">
 
 
 ## Created files
@@ -38,8 +38,8 @@ Let's start describing each one. Simply type  ` npm start ` and check the opened
 <h1 id="Errors">Errors you may run into </h1>
 
   - If your error was something about `scripts is disabled in this system ` it means that you have to change the ***Execution Policy*** of your system by simply typing : `Set-ExecutionPolicy RemoteSigned` in the terminal.
-  <img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/scripts%20disable%20error.PNG" height="500" width="500" align="middle">
+  <img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/scripts%20disable%20error.PNG" height="163" width="1000" align="middle">
 
   - If you had any error with the concept of `Missing Write Access` you should simply switch to _Administrator Terminal_ with the shortcut : `alt + f` and then pressing `s` then `r`.
   <!-- place for image 3 -->
-<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/accessError.PNG" height="500" width="500" align="middle">
+<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/accessError.PNG" height="466" width="1000" align="middle">
