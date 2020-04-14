@@ -19,9 +19,12 @@ Another advantage of _React_ is ***"One Way Data Flow"***. The best way describi
 <img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/OneWay%20Data%20Flow.PNG" height="500" width="500" align="middle">
 
 
-If any _red_ components change, only their _children_ would be affected by the change and theirs _parents_ wouldn't even care about the change. This concept prevents a lot of bugs from happening in our code.
+If any _red_ components change, only their _children_ would be affected  and theirs _parents_ wouldn't even care about what has happened to their children. This concept prevents a lot of bugs from happening in our code.
 
-Another advantage of _React_ is something called ***Virtual DOM***. Before _React_ we would refer to each element individually by calling each object by it's _ID_ or _Name_ or etc. But in _React_ we say > Hey _React_ , this is the whole object and we want this to look like this, do the rest for us and don't bother us with the ID selection or anything.
+Another advantage of _React_ is something called ***Virtual DOM***. Before _React_ we would refer to each element individually by calling each object by it's _ID_ or _Name_ or etc. But in _React_ we say:
+
+ > Hey _React_ , this is the whole object and we want this to look like this, do the rest for us and don't bother us with the ID selection or anything.
+
 And that's what _React_ does. Reaching us to our purpose without bothering us with the details. This is the main reason that we can use _React_ to also write _Mobile Apps_ or _Web Pages_ all together by just telling the _React_ to convert them to each other saving us the time for writing the app for other platforms from scratch.
 
 ### Warning :
