@@ -27,7 +27,10 @@ Another advantage of _React_ is something called ***Virtual DOM***. Before _Reac
 
 And that's what _React_ does. Reaching us to our purpose without bothering us with the details. This is the main reason that we can use _React_ to also write _Mobile Apps_ or _Web Pages_ all together by just telling the _React_ to convert them to each other saving us the time for writing the app for other platforms from scratch.
 
+The good about _React_ is that if we changed any source file in our _CSS_ , _HTML_ or _JS_ code , there is no need for us to refresh the page. React has a _Local Virtual Server_ that does this task for us automatically.
+
 ### Warning :
-When you see a _React_ code for the first time you may get confused a little bit due to the structure but don't worry you will understand everythingas the time passes.
+  - _Sublime text_ doesn't recognize the _React_ files. In order to do so we must install _babel package_ .
+  - When you see a _React_ code for the first time you may get confused a little bit due to the structure but don't worry you will understand everythingas the time passes.
 
 Good Luck.
