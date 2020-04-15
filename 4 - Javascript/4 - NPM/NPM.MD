@@ -28,7 +28,7 @@
   - In simple concise terms, ***Node JS*** is what allows us to run _Java Script_ code outside a _Browser Console_.
   - For more information you can visit [Wikipedia](https://en.wikipedia.org/wiki/Node.js).
 
-### Lodash & Live-server packages :
+# Lodash & Live-server packages :
   - we can install any package in two types :
     - ***Locally*** : You can only use the package in your project directory.
     - ***Globally*** : You can use the package **anywhere** on your computer such as **Terminal**.
