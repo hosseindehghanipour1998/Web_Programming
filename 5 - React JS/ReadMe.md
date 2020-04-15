@@ -29,8 +29,17 @@ And that's what _React_ does. Reaching us to our purpose without bothering us wi
 
 The good about _React_ is that if we changed any source file in our _CSS_ , _HTML_ or _JS_ code , there is no need for us to refresh the page. React has a _Local Virtual Server_ that does this task for us automatically.
 
+
+<h1 id="InstallingBabel"> Installing Babel <h1>
+  1. First Open Sublime text Editor.
+  2. press `ctrl + alt + p` which opens a terminal for you.
+  3. Write `install Package` and press `Enter`. This will show you a list of packages.
+  4. Search for `Babel` and while you found it press `Enter`.
+  5. Then open  Sublime Text again and at the _Bottom Corner_ of the page you can click on the red rectangle and change it to `babel -> Java Script`
+
 ### Warning :
-  - _Sublime text_ doesn't recognize the _React_ files. In order to do so we must install _babel package_ .
+  - _Sublime text_ doesn't recognize the _React_ files. In order to do so we must install _babel package_ .[How to Install Babel ?](#InstallingBabel)
   - When you see a _React_ code for the first time you may get confused a little bit due to the structure but don't worry you will understand everythingas the time passes.
+
 
 Good Luck.
