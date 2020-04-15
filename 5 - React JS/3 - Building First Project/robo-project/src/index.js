@@ -32,7 +32,7 @@ ReactDOM.render(
 */
 
 // ============ Method 3 ================
-import App from './App'
+import App from './Containers/App'
 ReactDOM.render(
 	<App />
 ,

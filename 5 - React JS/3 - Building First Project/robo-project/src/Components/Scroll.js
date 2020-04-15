@@ -6,6 +6,7 @@ const Scroll = (props) => {
 
 	return (
 		// we can get a CSS file stylee by putting the CSS code in double {{}}
+		// this is the style of the scroll window.
 		<div style={{overflowY:'scroll' , border:'5px solid black' ,height:'500px'}}>
 			{props.children}
 		</div>

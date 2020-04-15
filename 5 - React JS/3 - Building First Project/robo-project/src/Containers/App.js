@@ -1,7 +1,8 @@
 
-import CardList from './CardList'
-import {robots} from './robots'
-import SearchBox from './SearchBox'
+// change . to ../CardList because we are going to leave Containers folder where app.JS is and then go to the Components folder.
+import CardList from '../Components/CardList'
+import {robots} from '../robots'
+import SearchBox from '../Components/SearchBox'
 import './App.css'
 
 
@@ -87,7 +88,7 @@ so the first thing we need to do is to change the state the parent is going to g
 
 
 import React,{Component} from 'react' ;
-import Scroll from'./Scroll';
+import Scroll from'../Components/Scroll';
 
 class App extends Component {
 
@@ -116,14 +117,6 @@ class App extends Component {
     });
   }
 
-  getfilteredRobotsNames = () => {
-    let allRobots = this.state.robots ;
-    let searchField = this.state.searchfield ;
-    const filteredRobots = allRobots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchField.toLowerCase());
-    });
-    return filteredRobots ;
-  }
 
   // let's make a <scroll> object tag.
   render(){

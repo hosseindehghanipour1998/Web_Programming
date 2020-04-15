@@ -1,5 +1,5 @@
 import React from 'react';
-import { robots } from './robots';
+import { robots } from '../robots';
 import Card from './Card' ;
 
 // Recutrn Components Statically
