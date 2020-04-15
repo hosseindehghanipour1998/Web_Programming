@@ -52,16 +52,22 @@ First it's good to mention that we are going to use _Terminal_ to run some comma
 ## Create your project
 Now that we have installed this app, we create react app by simply typing :
 
-` create-ract-app app-name`
+`$ create-ract-app app-name`
 
 If you faced any errors, click [Here](#Errors)
 
 which would create the project you want at the current directory you are in right now. Now if we go to the directory we can simply see that a lot of files have been created for us.[(a sample)](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/5%20-%20React%20JS/1%20-%20Create%20Your%20First%20React%20App/first-react-project)
 
+How to ***Finish off*** your project ? by simply typing the command :
+
+`$ npm run build`
+
+ which would _"Minify"_ all the codes and everything else we have made so far and puts them into a _"Build"_ folder in our project. We can deploy our app by deploying that folder.
+
 ## Wander in the created files
 If we go to _package.json_ we can see that a few tags have been written down there.
 
-Let's start describing each one. Simply type  ` npm start ` and check the opened browser for us. This what you should see on the opened browser:
+Let's start describing each one. Simply type  `$ npm start ` and check the opened browser for us. This what you should see on the opened browser:
 
 
 <img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/React/start.PNG" height="400" width="500" align="middle">
