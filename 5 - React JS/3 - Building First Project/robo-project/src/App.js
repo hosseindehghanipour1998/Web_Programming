@@ -86,7 +86,8 @@ so the first thing we need to do is to change the state the parent is going to g
 // Visit : https://reactjs.org/docs/react-component.html
 
 
-import React,{Component} from 'react'
+import React,{Component} from 'react' ;
+import Scroll from'./Scroll';
 
 class App extends Component {
 
@@ -124,6 +125,7 @@ class App extends Component {
     return filteredRobots ;
   }
 
+  // let's make a <scroll> object tag.
   render(){
 
       const filteredRobotsObject = 
@@ -137,20 +139,19 @@ class App extends Component {
 
       else {
         return (
+
           <div className="tc">
             <h1 className="f1">Robot Friends</h1>
+
             <SearchBox searchChange = {this.onSearchChange}/>
-            <CardList robots = {filteredRobotsObject} />
+            <Scroll> 
+              <CardList robots = {filteredRobotsObject} />
+            </Scroll>
           </div>
          );
       }
 
   }
 }
-
-
-
-
-
 
 export default App;
