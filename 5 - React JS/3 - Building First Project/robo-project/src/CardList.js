@@ -40,7 +40,7 @@ not efficient so we have to assign a key property to each element to be able to 
 */
 
 // Return Components Dynamically with key prop
-const CardList = () => {
+const CardList = ({robots}) => {
 	const cardComponent = robots.map( (user,i) => {
 		// "i" stands for index in looping.
 		return (
