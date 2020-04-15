@@ -5,4 +5,4 @@ First we change `<App />` in `src/index.js` file to our own-made component which
 
 # Install Tacyons
 [tachyon](https://tachyons.io/docs/table-of-styles/)
-`pnm install tachyons`
+`npm install tachyons`

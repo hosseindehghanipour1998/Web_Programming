@@ -30,7 +30,7 @@ And that's what _React_ does. Reaching us to our purpose without bothering us wi
 The good about _React_ is that if we changed any source file in our _CSS_ , _HTML_ or _JS_ code , there is no need for us to refresh the page. React has a _Local Virtual Server_ that does this task for us automatically.
 
 
-<h1 id="InstallingBabel"> Installing Babel <h1>
+<h1 id="InstallingBabel"> Installing Babel </h1>
   1. First Open Sublime text Editor.
   2. press `ctrl + alt + p` which opens a terminal for you.
   3. Write `install Package` and press `Enter`. This will show you a list of packages.
