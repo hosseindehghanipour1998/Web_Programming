@@ -17,7 +17,7 @@ This repository is under ___MIT___ license which means you are welcomed to use t
 ### FAQ
 Your comments uder any piece of the code is appreciated. I would be glad to asnwer any questions you may have over the codes and resources.
 
-You can contact me via gmail at : [hossein[dot]dehghanipour1998[at]gmail[dot]com](hossein.dehghanipour1998@gmail.com).
+You can contact me via gmail at : [hossein[dot]dehghanipour1998[at]gmail[dot]com](https://hossein.dehghanipour1998@gmail.com).
 
 With regards,
 
