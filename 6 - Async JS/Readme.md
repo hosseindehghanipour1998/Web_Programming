@@ -14,8 +14,52 @@ But what happens if a file is highly large and it requires more time to be uploa
   - Communicates with a server with _HTTP Request_.
   - No need to reload the whole page for editing one element.
 
-# What do we need ?
+### What do we need ?
   - First install a _Live Server_ for _Atom_ by simply going to : `Atom -> File -> Settings -> Install ` and in there search for `atom-live-server` and install that package.
   - Now let's write our [First Asynchronous Code](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/1%20-%20First%20Async%20Request) with JavaScript.
   - Read more about _atom-live-server_  [here](https://atom.io/packages/atom-live-server).
+
+### How to run Atom-Live-Server
+| Command  |  Keybinding | Description  |
+| :-: | :-: | :-: |
+| atom-live-server:start-server | ctrl-alt-l |  Launch live server on default port, by default 3000.  |  
+| atom-live-server:stop-server  | ctrl-alt-q |  Stops currently running instance of live server. |   
+| atom-live-server:start-3000   | ctrl-alt-3 |  Launch live server on port 3000.  |
 | atom-live-server:start-4000   | ctrl-alt-4 |  Launch live server on port 4000.  |
+| atom-live-server:start-5000   | ctrl-alt-5 |	Launch live server on port 5000.  |
+| atom-live-server:start-8000   | ctrl-alt-8 |	Launch live server on port 8000.  |
+| atom-live-server:start-9000   | ctrl-alt-9 |  Launch live server on port 9000.  |
+
+### Callback Hell
+Asynchronous JavaScript, or JavaScript that uses callbacks, is hard to get right intuitively. A lot of code ends up looking like this:
+```
+fs.readdir(source, function (err, files) {
+  if (err) {
+    console.log('Error finding files: ' + err)
+  } else {
+    files.forEach(function (filename, fileIndex) {
+      console.log(filename)
+      gm(source + filename).size(function (err, values) {
+        if (err) {
+          console.log('Error identifying file size: ' + err)
+        } else {
+          console.log(filename + ' : ' + values)
+          aspect = (values.width / values.height)
+          widths.forEach(function (width, widthIndex) {
+            height = Math.round(width / aspect)
+            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+              if (err) console.log('Error writing file: ' + err)
+            })
+          }.bind(this))
+        }
+      })
+    })
+  }
+})
+```
+
+[reference](http://callbackhell.com/)
+[Sample Project](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/2%20-%20Callback%20Hell)
+
+### Javascript Promises
