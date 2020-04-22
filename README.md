@@ -9,15 +9,15 @@ This repository is under ___MIT___ license which means you are welcomed to use t
 
 ### References
   - Udemy.The.Complete.Web.Developer.in.2018.Zero.to.Mastery by _Andrei Neagoie_.
-    - A newer version is provided at [Udemy](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/). 
+    - A newer version is provided at [Udemy](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/).
   - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
   - [W3Schools](https://www.w3schools.com/).
 
 
 ### FAQ
-Your comments uder any piece of the code is appreciated. I would be glad to asnwer any questions you may have over the codes and resources.
+Your comments under any piece of the code is appreciated. I would be glad to answer any questions you may have over the codes and resources.
 
-You can contact me via gmail at : [hossein[dot]dehghanipour1998[at]gmail[dot]com](https://hossein.dehghanipour1998@gmail.com).
+You can contact me via Gmail at : [hossein[dot]dehghanipour1998[at]gmail[dot]com](https://hossein.dehghanipour1998@gmail.com).
 
 With regards,
 
