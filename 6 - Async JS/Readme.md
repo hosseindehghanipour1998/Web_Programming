@@ -69,3 +69,6 @@ fs.readdir(source, function (err, files) {
   - [Sample Project](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/3%20-%20Promises)
 
 ### Generators
+  - How to define a Generator ?
+    - function* <function-name>(){<body of function>}
+  - If you have passed the `Programming Languages` course, then you are familiar with the concepts that are talked about in here otherwise I'll suggest you to read [__Coroutines__](https://en.wikipedia.org/wiki/Coroutine).
