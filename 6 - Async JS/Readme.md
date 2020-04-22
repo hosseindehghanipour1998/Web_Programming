@@ -18,3 +18,4 @@ But what happens if a file is highly large and it requires more time to be uploa
   - First install a _Live Server_ for _Atom_ by simply going to : `Atom -> File -> Settings -> Install ` and in there search for `atom-live-server` and install that package.
   - Now let's write our [First Asynchronous Code](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/1%20-%20First%20Async%20Request) with JavaScript.
   - Read more about _atom-live-server_  [here](https://atom.io/packages/atom-live-server).
+| atom-live-server:start-4000   | ctrl-alt-4 |  Launch live server on port 4000.  |
