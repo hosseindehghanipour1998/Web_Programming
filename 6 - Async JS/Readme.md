@@ -57,9 +57,13 @@ fs.readdir(source, function (err, files) {
     })
   }
 })
-```
 
 [reference](http://callbackhell.com/)
+```
+
+
 [Sample Project](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/2%20-%20Callback%20Hell)
 
 ### Javascript Promises
+  - Sometimes promises libraries are not supported by some browsers which makes it a little tricky to use.
+  
