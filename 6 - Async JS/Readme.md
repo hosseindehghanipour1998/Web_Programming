@@ -66,7 +66,12 @@ fs.readdir(source, function (err, files) {
 
 ### Javascript Promises
   - Sometimes promises libraries are not supported by some browsers which makes it a little tricky to use.
-  - [Sample Project](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/3%20-%20Promises)
+  - Promises have 3 Stages :
+    - __Fulfilled__ : When the promise has done his job and returned the wanted value(s).
+    - __Rejected__ : When the promise has failed to do the task.
+    - __Pending__ : When promise has neither failed nor succeeded in doing the given task and is still trying.
+  - [Sample Code I](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/3%20-%20Promises)
+  - [Sample Code II](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/6%20-%20Async%20JS/5%20-%20Promises%20II)
 
 ### Generators
   - How to define a Generator ?
