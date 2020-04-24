@@ -39,6 +39,15 @@ The good about _React_ is that if we changed any source file in our _CSS_ , _HTM
   - Write `install Package` and press `Enter`. This will show you a list of packages.
   - Search for `Babel` and while you found it press `Enter`.
   - Then open  Sublime Text again and at the _Bottom Corner_ of the page you can click on the red rectangle and change it to `babel -> Java Script`
+  
+# Install Tachyons
+
+### What is Tachyons ?
+_Tachyons_ is a library for _React_ that allows us to build our project easier , faster and also more responsive.
+For more information visit [tachyons](https://tachyons.io/docs/table-of-styles/)
+
+### How to install
+`npm install tachyons`
 
 # Installing React For first Time
 First it's good to mention that we are going to use _Terminal_ to run some commands in order to install some files.
@@ -58,6 +67,8 @@ If you faced any errors, click [Here](#Errors)
 
 which would create the project you want at the current directory you are in right now. Now if we go to the directory we can simply see that a lot of files have been created for us.[(a sample)](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/5%20-%20React%20JS/1%20-%20Create%20Your%20First%20React%20App/first-react-project)
 
+
+## Publish your project
 How to ***Finish off*** your project ? by simply typing the command :
 
 `$ npm run build`
