@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Basic jQuery Selectors</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+		/*
+			the result of this line of code is that it returns an array os <p> objects on the page.
+			Notice that we don't use the angle brackets "<" or ">". We just use the name of the tag "p".	
+		*/
+            //$("p").css("border", "3px solid red");
+            //$(".a").css("border", "3px solid red");
+            //$("#example").css("border", "3px solid red");
+			
+			/*
+				We are asking jQuery to get all of the <p> tags that have class="b" 
+			*/
+            //$("p.b").css("border", "3px solid red");
+        });
+    </script>
+</head>
+<body>
+    <h1>Using Basic jQuery Selectors</h1>
+    <p>Selectors are used to do exactly what their name implies: select content within a Web page.</p>
+    <p>They use a very CSS-like syntax in order to do this. To take a few examples:</p>
+	<ul id="list1">
+		<li class="a"><code>$("<i>tag</i>")</code>: Select all of the &lt;tag&gt; elements</li>
+		<li class="a"><code>$("<i>.className</i>")</code>: Select all elements that have the <i>className</i> class applied</li>
+		<li class="b"><code>$("#identifier")</code>: Select the element with the id of <i>identifier</i></li>
+		<li class="b"><code>$("<i>tag.className</i>")</code>: Select all &lt;tag&gt; elements that have the <i>className</i> class applied</li>
+	</ul>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4" lang="en-us">This is paragraph 4</p>
+        <p id="para5" lang="en-gb">This is paragraph 5</p>
+    </div>
+</body>
+</html>
