@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using jQuery Animations</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#go").click(function() {  // we are attaching a "click" handler to button which will be launched when we click the button.
+                    $("#testDiv").animate({width: 400}, 300) 
+					// this tell the <div> element with the given ID="testDiv" and gives it the next orders to be executed.
+					// and also execute this command in 300 milli seconds.
+                    .animate({height: 300}, 400) 
+					// this is what increases the height of the box. And also do this task in 400 milli seconds.
+                    .animate({left: 200}, 500) 
+					// this is what causes the box to move to left. ( 200 is in pixels ) and do this task in 500ms.
+                    .animate({top: "+=100", borderWidth: 10}, "slow")});
+					// take what ever the top is and increase it 100 units. and we are using the keyword "slow" instead of the ms as an speed.
+        });
+    </script>
+<style>
+    #testDiv {
+        position:relative;
+        width: 150px;
+        height: 100px;
+        margin: 10px;
+        padding: 20px;
+        background: #b3c8d0;
+        border: 1px solid black;
+        font-size: 16pt;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>Quick jQuery Animation Intro</h1>
+    <p>jQuery provides some basic animation features for showing and hiding elements, as well as a low-level animation function that can be used to animate several CSS properties (as long as they are numeric).</p>
+    <button id="go">Go</button>
+    <div id="testDiv"></div>
+</body>
+</html>
