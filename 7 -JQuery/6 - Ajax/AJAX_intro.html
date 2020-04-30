@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery and AJAX</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#getcontent").click(getContent);
+			// the click() method is the simplest way to assign an event handler to an element.
+            $("#loadhtml").click(loadHTML);
+        });
+        
+        function getContent() {
+		/*
+			The @ajax() function gets a few arguments :
+				# first arg : the content that we want to open and use. It can be a URL or a path to a File.
+				# seconds arg : a "success" funtions which means if the data has beedn fetched successfully from the given URL then 
+				execute the given function as our success-function.
+				# third arg : the type of HTTP request for which we have used "GET" in here.
+				# 4th  arg : what type of data am I "Expecting" ??
+		
+		*/
+            $.ajax("sampletextcontent.txt", 
+                   { success: setContent, type: "GET", dataType: "text" });
+        }
+        
+		/* 
+			The @data is the actual data we have gathered from that .txt file.
+		*/
+        function setContent(data, status, jqxhr) {
+            $("#example").text(data);
+        }
+        
+        function loadHTML() {
+            $("#example").load("samplehtml.html");
+        }
+    </script>
+</head>
+<body>
+    <h1>AJAX and jQuery</h1>
+    <p>One of jQuery's great strengths is how it simplifies working with AJAX. jQuery provides high-level wrapper functions for retrieving data, working with different data types, handling errors, and monitoring the AJAX request process.</p>
+    <ul>
+        <li><code>ajax()</code>: used to perform generic AJAX requests</li>
+        <li><code>load()</code>: loads AJAX content directly into a page element</li>
+    </ul>
+    <div id="example">
+    </div>
+    <button id="getcontent">Get Text</button>
+    <button id="loadhtml">Load HTML</button>
+</body>
+</html>
