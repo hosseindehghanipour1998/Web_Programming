@@ -12,6 +12,7 @@ This repository is under ___MIT___ license which means you are welcomed to use t
     - A newer version is provided at [Udemy](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/).
   - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
   - [W3Schools](https://www.w3schools.com/).
+  - [Lynda](https://www.lynda.com/).
 
 
 ### FAQ
