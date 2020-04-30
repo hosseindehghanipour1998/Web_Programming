@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Event Handling</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+		/*
+		on() means start listening for an event.
+		
+		*/
+            $("#example").on("mousemove", onMouseOver);
+            $("#example").on("click", onMouseClick);
+            $("#example").on("mouseleave", onMouseLeave);
+        });
+        
+		
+		/*
+		@evt : jQuery unified event object with which it handles the events.
+		
+		*/
+        function onMouseOver(evt) {
+            $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY
+                               + "\n" + "Button: " + evt.which + 
+                               " Key: " + evt.metaKey);
+        }
+        function onMouseClick(evt) {
+            $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+            $("#example").off("mousemove", onMouseOver);
+			/*
+			off() is the opposite of on().
+			on() method would turn on the mouse event listener but off() would turn of the event listener.
+			*/
+        }
+        function onMouseLeave(evt) {
+            $("#example").text("mouseleave");
+        }
+    </script>
+</head>
+<body>
+    <h1>jQuery Event Handling</h1>
+    <p>jQuery normalizes an event structure across browsers and provides cross-browser consistency for properties such as the event name, the page coordinates of the mouse, the element where the event originated along with any other element related to the event, and information such as whether a meta-key or specific mouse button was pressed.</p>
+    <div id="example">
+    </div>
+</body>
+</html>
