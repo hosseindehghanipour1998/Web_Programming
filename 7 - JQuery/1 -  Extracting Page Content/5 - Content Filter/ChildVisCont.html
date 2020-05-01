@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Child and Content Filters</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+			/*
+				Select the paragraph that has number 3 inside it.
+			*/
+            //$("p:contains('3')").css("border", "3px solid red");
+			
+			
+			/*
+				Select the paragraph that is a parent. By being a parent we mean that 
+				it has a tag or a text  inside it.
+			*/
+            //$("p:parent").css("border", "3px solid red");
+			
+			/*
+				Looking for a div that have the paragraph which have the class = a assigned to them.
+			*/
+            //$("div:has(p[class=a])").css("border", "3px solid red");
+			
+			/*
+				we are looking for the paragraphs that are inside a div and we want to select the paragraphs that are the first child of their parent
+				which is "div" in this example.
+			*/
+            //$("div p:first-child").css("border", "3px solid red");
+			
+			/*
+				we are looking for the last child-paragraph of the all of the div elements.
+			*/
+            //$("div p:last-of-type").css("border", "3px solid red");
+			
+			
+			/*
+				We want paragraphs that are inside a dive and they are the 3rd child of their parents. Counting the child is 1 indexed not 0 indexed.
+			*/
+            //$("div p:nth-child(3)").css("border", "3px solid red");
+			
+			
+			/*
+				Every multiple index of 2 is selected.
+			*/
+            //$("div p:nth-child(2n)").css("border", "3px solid red");
+        });
+    </script>
+</head>
+<body>
+    <h1>Using Child and Content Filters</h1>
+    <p>These selectors are used to retrieve content that matches certain conditions, such as whether they contain certain content, whether they are visible/hidden, or whether they are in a certain position within their parent.</p>
+	<ul id="list1">
+		<li class="a"><code>:contains('<i>text</i>')</code>: select elements that contain specific text</li>
+		<li class="a"><code>:parent</code>: select elements have at least one child node (element or text)</li>
+		<li class="a"><code>:has(<i>selector</i>)</code>: select elements that contain at least one element that matches the selector</li>
+		<li class="a"><code>:first-child</code>: select elements that are the first child of their parents</li>
+		<li class="a"><code>:last-of-type</code>: select elements that are the last of their type among siblings</li>
+		<li class="a"><code>:nth-child()</code>: select elements that are the nth child of their parent</li>
+	</ul>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4" lang="en-us">This is paragraph 4</p>
+        <p id="para5" lang="en-gb">This is paragraph 5</p>
+    </div>
+</body>
+</html>
