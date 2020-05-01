@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Using Attribute Filters</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+			/*
+				we are getting all the paragraphs that include a class inside ... 
+				we don't care about the value of the class but we only care about their existence.
+			*/ 
+
+    //        $("p[class]").css("border", "3px solid red");
+	
+			// we are looking for a specific element with a specific attribute ( in here id is our attribute chosen to be equal to para1 )
+    //        $("p[id=para1]").css("border", "3px solid red");
+	
+			// we are looking for the attributes which have ids that start with "para"
+    //        $("p[id^=para]").css("border", "3px solid red");
+	
+			// we are looking for elemenets that have attribute id starting with "para" and "lang" attribute that CONTAINS "en" in it.
+			// ^=  : Start with .... 			
+			// *=  : contains the text ...
+    //        $("p[id^=para][lang*=en-]").css("border", "3px solid red");
+        });
+    </script>
+</head>
+<body>
+    <h1>Using Attribute Filters</h1>
+    <p>Attribute filters are used to select elements in the Web page that have attribute values matching a given set of criteria.</p>
+    <p>Some examples include:</p>
+	<ul id="list1">
+		<li class="a">[<i>attr</i>]: element has an attribute named <i>attr</i></li>
+		<li class="a">[<i>attr</i>=val]: element has an attribute whose value is "val"</li>
+		<li class="b">[<i>attr</i>^=val]: element has an attribute whose value starts with "val"</li>
+	</ul>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4" lang="en-us">This is paragraph 4</p>
+        <p id="para5" lang="en-gb">This is paragraph 5</p>
+    </div>
+</body>
+</html>
