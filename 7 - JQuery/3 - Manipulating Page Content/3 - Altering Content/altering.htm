@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Altering Document Content</title>
+<link rel="stylesheet" href="../style.css"/>
+<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    $("document").ready(function() {
+        //$("#example p").wrap("<div style='color:red'/>");
+        //$("#example p").wrapAll("<div style='border:3px solid red'/>");
+        //$("#example").empty();
+        //$("#example p.a, #example p.b").remove();
+        //$("#example p.a, #example p.b").detach();
+        //$("<div>replaced</div>").replaceAll("#example p[id]");
+        //$("#example p[id]").replaceWith("<div>replaced</div>");
+        //$("#example p").replaceWith(replacementFn);
+    });
+    
+    function replacementFn() {
+        if ($(this).text().indexOf("1") != -1) {
+            return "<p>This is paragraph uno</p>";
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>Altering Document Content</h1>
+    <p>In addition to creating and inserting content, the ability to alter the current content of a page is a key scenario in Web development. jQuery has functions tailored to specific situations where content needs to be altered:</p>
+	<ul id="list1">
+		<li><code>wrap()</code>: wrap the matched elements with the specified content</li>
+		<li><code>wrapAll()</code>: wrap content around the matched elements as a group</li>
+		<li><code>unWrap()</code>: remove the parents from the matched elements</li>
+		<li><code>empty()</code>: remove all the child elements from the matched elements</li>
+		<li><code>remove()</code>: removes elements from the page, including any embedded data and event handlers</li>
+		<li><code>detach()</code>: removes elements from the page, but maintains embedded data and event handlers</li>
+		<li><code>replaceAll()</code>: replaces the matched elements with the specified content</li>
+		<li><code>replaceWith()</code>: replaces matched elements with content or the results of a callback function</li>
+	</ul>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4" lang="en-us">This is paragraph 4</p>
+        <p id="para5" lang="en-gb">This is paragraph 5</p>
+    </div>
+</body>
+</html>
