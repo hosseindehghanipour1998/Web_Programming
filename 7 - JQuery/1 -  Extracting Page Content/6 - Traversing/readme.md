@@ -1,7 +1,8 @@
 ## Web Hierarchy
 All the elements on a web page are organized like a tree. The _Document_ Class is the _root_ and the rest of the elements are it's _nodes_ and _leaves_.
 
-<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/jQuery/DOM_Tree.gif" height="486" width="266" align="middle">
+<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/jQuery/DOM_Tree.gif" height="auto" width="auto" align="middle">
+
 #### Advantages of this hierarchy
 With the object model, JavaScript gets all the power it needs to create dynamic HTML:
 
