@@ -1,7 +1,8 @@
 ## Web Hierarchy
 All the elements on a web page are organized like a tree. The _Document_ Class is the _root_ and the rest of the elements are it's _nodes_ and _leaves_.
 
-<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/jQuery/DOM_Tree.gif" height="486" width="266" align="middle">
+<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/jQuery/DOM_Tree.gif" height="auto" width="auto" align="middle">
+
 #### Advantages of this hierarchy
 With the object model, JavaScript gets all the power it needs to create dynamic HTML:
 
@@ -33,3 +34,6 @@ The HTML DOM is a standard object model and programming interface for HTML. It d
   - The methods to access all HTML elements
   - The events for all HTML elements
   - In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+  
+### Reference : 
+  - [W3Schools](https://www.w3schools.com/js/js_htmldom.asp)
