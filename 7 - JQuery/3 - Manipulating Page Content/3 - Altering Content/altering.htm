@@ -6,16 +6,32 @@
 <script type="text/javascript" src="../jquery-1.11.1.js"></script>
 <script type="text/javascript">
     $("document").ready(function() {
+		// Allows us to wrap content around the exsiting content
         //$("#example p").wrap("<div style='color:red'/>");
+		
+		// wraps all of the paragraphs with a red border.
         //$("#example p").wrapAll("<div style='border:3px solid red'/>");
-        //$("#example").empty();
+       
+
+	   //$("#example").empty();
+	   // Remove function removes the lemenets including the embeded data and event handlers
         //$("#example p.a, #example p.b").remove();
+		
+
+		/*
+			detach removes the elements but maintains the event handlers and embeded
+			data in case you added it again it collaborates with the handlers and the data again.
+		*/
         //$("#example p.a, #example p.b").detach();
+		
+		
         //$("<div>replaced</div>").replaceAll("#example p[id]");
         //$("#example p[id]").replaceWith("<div>replaced</div>");
         //$("#example p").replaceWith(replacementFn);
     });
     
+	// we have passed this replacement function to replaceWith function
+	// so the keyword this is referring to the "#example p[id]".
     function replacementFn() {
         if ($(this).text().indexOf("1") != -1) {
             return "<p>This is paragraph uno</p>";
