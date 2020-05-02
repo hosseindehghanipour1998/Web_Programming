@@ -35,5 +35,11 @@ The HTML DOM is a standard object model and programming interface for HTML. It d
   - The events for all HTML elements
   - In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
   
+
+### Functions for traversing :
+<img src="https://github.com/hosseindehghanipour1998/Web_Programming/blob/master/Misc%20Data/jQuery/traversingFunctions.PNG" height="auto" width="auto" align="middle">
+
+  
 ### Reference : 
   - [W3Schools](https://www.w3schools.com/js/js_htmldom.asp)
+  - [Lynda](https://www.Lynda.com/)
