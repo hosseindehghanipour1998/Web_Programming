@@ -5,7 +5,9 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/JQuery):
 
 
 ## Table of contents
-  - [Overview](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/7%20-JQuery/0%20-%20A%20Quick%20Overview)
+  - [A Quick Overview](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/7%20-%20JQuery/1%20-%20A%20Quick%20Overview)
+  - [Extracting Page Content](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/7%20-%20JQuery/2%20-%20%20Extracting%20Page%20Content)
+  - [Manipulating Page Contents](https://github.com/hosseindehghanipour1998/Web_Programming/tree/master/7%20-%20JQuery/3%20-%20Manipulating%20Page%20Content)
   
 ## Useful resources
    - [W3School](https://www.w3schools.com/jquery/)
