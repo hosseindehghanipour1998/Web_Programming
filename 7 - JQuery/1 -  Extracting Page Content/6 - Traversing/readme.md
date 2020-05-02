@@ -34,3 +34,6 @@ The HTML DOM is a standard object model and programming interface for HTML. It d
   - The methods to access all HTML elements
   - The events for all HTML elements
   - In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+  
+### Reference : 
+  - [W3Schools](https://www.w3schools.com/js/js_htmldom.asp)
