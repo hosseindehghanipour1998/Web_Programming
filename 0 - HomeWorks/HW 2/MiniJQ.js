@@ -65,6 +65,9 @@ class MinjQuery {
             child = e.lastElementChild; 
         }
     }
+    get getClasses(){
+    	return this.element.classList ;
+    }
 
 }
 
@@ -132,6 +135,21 @@ function main() {
 	};
 	jQueryClass.hover(onHover);
 	
+	// ===================== fadeToggle() ===============================
+	//jQueryClass.fadeToggle();
+
+
+	// ===================== ToggleClass() ===============================
+	console.log("====================== Testing ToggleClass Function ==========================");
+	jQueryClass.addClass("Vampire old-guy great-blood");
+	console.log(`Classes : ${jQueryClass.element.classList}`);
+	console.log("Toggling...");
+	jQueryClass.toggleClass('Vampire');
+	console.log(`Classes : ${jQueryClass.getClasses}`);
+	console.log("Toggling...");
+	jQueryClass.toggleClass('Seyyed');
+	console.log(`Classes : ${jQueryClass.getClasses}`);
+
 
 
 }
