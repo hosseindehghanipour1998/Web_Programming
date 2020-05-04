@@ -32,7 +32,7 @@ class MinjQuery {
     }
 
     hover(callback){
-        this.element.addEventListener("mouseover",callback)
+        this.element.addEventListener("mouseover",callback);
     }
 
     removeAttr(name){
@@ -49,5 +49,16 @@ class MinjQuery {
 	    }
     }
 
+    hasClass(class_name){
+        return () status = this.element.classList.contains(class_name) ? true : false );
+    }
+
+    toggleClass(name){
+	    if(this.hasClass(name)){
+	        this.element.classList.remove(name);
+	    }
+	    else
+	        this.addClass(name)
+    }
 
 }
