@@ -120,8 +120,18 @@ function main() {
 		console.log(`Clicked on the ${jQueryClass.element}`); 
 		window.alert(`You Just Clicked on ${jQueryClass.element}`);
 	};
-	
+	console.log("====================== Testing click() Function ==========================");
 	jQueryClass.click(clickCB);
+
+
+	// ===================== hover() ===============================
+	const onHover = () => {
+		console.log("====================== Testing hover() Function ==========================");
+		jQueryClass.element.style.cursor  = "not-allowed";
+		console.log(`hovered over ${jQueryClass.element}`);
+	};
+	jQueryClass.hover(onHover);
+	
 
 
 }
