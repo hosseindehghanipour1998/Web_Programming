@@ -18,18 +18,17 @@ class MinjQuery {
     	return this.element.childNodes ;
     }
 
+
+    hasClass(class_name){
+        return (status = this.element.classList.contains(class_name) ? true : false );
+    }
+
     click(handlerCallbackFunction){
     	this.element.addEventListener('click', handlerCallbackFunction);
     }
 
 
-    empty(){
-        var child = e.lastElementChild;  
-        while (child) { 
-            e.removeChild(child); 
-            child = e.lastElementChild; 
-        }
-    }
+
 
     hover(callback){
         this.element.addEventListener("mouseover",callback);
@@ -49,9 +48,6 @@ class MinjQuery {
 	    }
     }
 
-    hasClass(class_name){
-        return (status = this.element.classList.contains(class_name) ? true : false );
-    }
 
     toggleClass(name){
 	    if(this.hasClass(name)){
@@ -61,21 +57,59 @@ class MinjQuery {
 	        this.addClass(name)
     }
 
+    empty(){
+    	var child = e.lastElementChild;  
+        while (child) { 
+            e.removeChild(child); 
+            child = e.lastElementChild; 
+        }
+    }
+
 }
 
 
 function main() {
 	
 	// ==================== Obtain an Element =====================
-	let element = document.getElementById('wrapper');
+	let element = document.getElementById('img_wrapper');
 	console.log(element);
+	
+
 	// ==================== Create The Class ======================
 	let jQueryClass = new MinjQuery(element);
+	
+
 	// ==================== Add A bunch of Classes ================
 	jQueryClass.addClass("Vampire old-guy great-blood");
 	let classList = jQueryClass.element.classList
 	//classList.forEach(item => console.log(`${item} \n`));
-	console.log(`Class List ${classList}`);
+	console.log("====================== Testing AddClass Function ==========================")
+	console.log(`Class List :  ${classList}`);
+
+	// ==================== Attribute Value =======================
+	let attrValue = jQueryClass.attr('src');
+	console.log("====================== Testing ATTR Function ==========================")
+	console.log(`attrValue :  ${attrValue}`);
+
+	// ==================== Children ==============================
+	let children = jQueryClass.children();
+
+	console.log("====================== Testing Children Function ==========================")
+	console.log(`Children : ${children}`);
+	printArr(children);
+
+
+	// ==================== HasClass() ==============================
+	console.log("====================== Testing hasClass Function ==========================")
+	let hasClass = jQueryClass.hasClass('Vampire');
+	console.log(`Has Class Vampire ? ${hasClass}`);
+	hasClass = jQueryClass.hasClass('sheep');
+	console.log(`Has Class Sheep ? ${hasClass}`);
+
+}
+
+function printArr(arr) {
+	arr.forEach(item => console.log(item));
 }
 
 main();
