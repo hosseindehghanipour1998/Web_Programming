@@ -15,7 +15,7 @@ class MinjQuery {
     }
 
     children(){
-    	return this.element.childNodes ;
+    	return this.element.children ;
     }
 
 
@@ -40,13 +40,23 @@ class MinjQuery {
 
 
     fadeToggle() {
-    	elementOpacity = this.element.style.opacity ;
+    	const c = (x) => {console.log("CCC : " + x);};
+		let y = this.element.style.opacity = '1' ;
+		while ( this.element.style.opacity > 0 ){
+			this.element.style.opacity -= 0.1;
+			y = this.element.style.opacity ;
+			setInterval(c(y), 3000);
+		}
+
+
+    	
+/*    	elementOpacity = this.element.style.opacity ;
 	    if ( elementOpacity >  0) {
 	        this.element.style.opacity = 0;
 	    }
 	    else if ( elementOpacity == 0 ) {
 	        this.element.style.opacity = 1;
-	    }
+	    }*/
     }
 
 
@@ -61,12 +71,16 @@ class MinjQuery {
     empty(){
     	var child = this.element.lastElementChild;  
         while (child) { 
-             this.element.removeChild(child); 
-            child = e.lastElementChild; 
+            this.element.removeChild(child); 
+            child = this.element.lastElementChild; 
         }
     }
     get getClasses(){
     	return this.element.classList ;
+    }
+
+    set setElement(e) {
+    	this.element = e ;
     }
 
 }
@@ -95,12 +109,6 @@ function main() {
 	console.log("====================== Testing ATTR Function ==========================")
 	console.log(`attrValue :  ${attrValue}`);
 
-	// ==================== Children ==============================
-	let children = jQueryClass.children();
-
-	console.log("====================== Testing Children Function ==========================")
-	console.log(`Children : ${children}`);
-	printArr(children);
 
 
 	// ==================== HasClass() ==============================
@@ -136,7 +144,8 @@ function main() {
 	jQueryClass.hover(onHover);
 	
 	// ===================== fadeToggle() ===============================
-	//jQueryClass.fadeToggle();
+	jQueryClass.fadeToggle();
+
 
 
 	// ===================== ToggleClass() ===============================
@@ -150,21 +159,26 @@ function main() {
 	jQueryClass.toggleClass('Seyyed');
 	console.log(`Classes : ${jQueryClass.getClasses}`);
 
+	// ==================== Children() ==============================
+	jQueryClass.setElement = document.getElementById('points-of-sale');
+	let children = jQueryClass.children();
+	console.log("====================== Testing Children Function ==========================")
+	console.log("changed the elemenet of jQuery Class ");
+	console.log(`Children : ${children}`);
 
 	// ===================== Empty() ===============================
 	console.log("====================== Testing Empty() Function ==========================");
-	console.log("changed the elemenet of jQuery Class ");
-	jQueryClass.elemenet = document.getElementById('points-of-sale');
-	console.log(`Children : ${jQueryClass.children().length}`);
+	console.log(`Number of Children : ${jQueryClass.children().length}`);
 	console.log("Calling empty() function");
 	jQueryClass.empty();
-	console.log(`Children : ${jQueryClass.children().length}`);
+	console.log(`Number of Children : ${jQueryClass.children().length}`);
+
+
 
 
 }
 
-function printArr(arr) {
-	arr.forEach(item => console.log(item));
-}
+function f() {}
+
 
 main();
