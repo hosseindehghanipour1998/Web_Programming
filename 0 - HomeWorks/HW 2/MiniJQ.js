@@ -23,20 +23,21 @@ class MinjQuery {
         return (status = this.element.classList.contains(class_name) ? true : false );
     }
 
-    click(handlerCallbackFunction){
-    	this.element.addEventListener('click', handlerCallbackFunction);
+    removeAttr(name){
+        this.element.removeAttribute(name);
     }
 
 
+    click(handlerCallbackFunction){
+    	this.element.addEventListener('click', handlerCallbackFunction);
+    }
 
 
     hover(callback){
         this.element.addEventListener("mouseover",callback);
     }
 
-    removeAttr(name){
-        this.element.removeAttribute(name);
-    }
+
 
     fadeToggle() {
     	elementOpacity = this.element.style.opacity ;
@@ -100,11 +101,28 @@ function main() {
 
 
 	// ==================== HasClass() ==============================
-	console.log("====================== Testing hasClass Function ==========================")
+	console.log("====================== Testing hasClass Function ==========================");
 	let hasClass = jQueryClass.hasClass('Vampire');
 	console.log(`Has Class Vampire ? ${hasClass}`);
 	hasClass = jQueryClass.hasClass('sheep');
 	console.log(`Has Class Sheep ? ${hasClass}`);
+
+
+	// ==================== removeAttr ==============================
+	jQueryClass.removeAttr('class');
+	hasClass = jQueryClass.hasClass('Vampire');
+	console.log("====================== Testing removeAttr Function ==========================");
+	console.log(`Has "Class" Attribute ? ${hasClass}`);
+
+
+	// ==================== click()  ==============================
+	const clickCB = () => {
+		console.log(`Clicked on the ${jQueryClass.element}`); 
+		window.alert(`You Just Clicked on ${jQueryClass.element}`);
+	};
+	
+	jQueryClass.click(clickCB);
+
 
 }
 
