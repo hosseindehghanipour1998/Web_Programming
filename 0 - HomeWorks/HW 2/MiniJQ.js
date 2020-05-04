@@ -59,9 +59,9 @@ class MinjQuery {
     }
 
     empty(){
-    	var child = e.lastElementChild;  
+    	var child = this.element.lastElementChild;  
         while (child) { 
-            e.removeChild(child); 
+             this.element.removeChild(child); 
             child = e.lastElementChild; 
         }
     }
@@ -150,6 +150,15 @@ function main() {
 	jQueryClass.toggleClass('Seyyed');
 	console.log(`Classes : ${jQueryClass.getClasses}`);
 
+
+	// ===================== Empty() ===============================
+	console.log("====================== Testing Empty() Function ==========================");
+	console.log("changed the elemenet of jQuery Class ");
+	jQueryClass.elemenet = document.getElementById('points-of-sale');
+	console.log(`Children : ${jQueryClass.children().length}`);
+	console.log("Calling empty() function");
+	jQueryClass.empty();
+	console.log(`Children : ${jQueryClass.children().length}`);
 
 
 }
