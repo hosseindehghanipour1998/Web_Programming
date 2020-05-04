@@ -50,7 +50,7 @@ class MinjQuery {
     }
 
     hasClass(class_name){
-        return () status = this.element.classList.contains(class_name) ? true : false );
+        return (status = this.element.classList.contains(class_name) ? true : false );
     }
 
     toggleClass(name){
@@ -62,3 +62,20 @@ class MinjQuery {
     }
 
 }
+
+
+function main() {
+	
+	// ==================== Obtain an Element =====================
+	let element = document.getElementById('wrapper');
+	console.log(element);
+	// ==================== Create The Class ======================
+	let jQueryClass = new MinjQuery(element);
+	// ==================== Add A bunch of Classes ================
+	jQueryClass.addClass("Vampire old-guy great-blood");
+	let classList = jQueryClass.element.classList
+	//classList.forEach(item => console.log(`${item} \n`));
+	console.log(`Class List ${classList}`);
+}
+
+main();
