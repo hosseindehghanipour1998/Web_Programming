@@ -46,7 +46,6 @@ class MinjQuery {
 	}
 
 
-
     toggleClass(name){
 	    if(this.hasClass(name)){
 	        this.element.classList.remove(name);
@@ -73,7 +72,7 @@ class MinjQuery {
 }
 
 
-function main() {
+function test() {
 	
 	// ==================== Obtain an Element =====================
 	let element = document.getElementById('img_wrapper');
@@ -169,9 +168,8 @@ function main() {
 
 
 
+
 }
 
-function f() {}
 
-
-main();
+test();
