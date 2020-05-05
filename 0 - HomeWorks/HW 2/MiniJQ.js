@@ -3,7 +3,6 @@ class MinjQuery {
 
 	constructor (passedElement){
 		this.element = passedElement ;
-		this.element.style.opacity = 1 ;
 	}
 
 	addClass(classes){
@@ -41,8 +40,18 @@ class MinjQuery {
 
 
     fadeToggle(time) {
-    	this.element.style.opacity = '0';
-		this.element.style.transition = `all  ${time}s`;	
+
+		if ( this.element.style.opacity == '0'){	
+			this.element.style.transition = `all  ${time}s`;
+			this.element.style.opacity = '1' ;
+		}
+		else {
+			this.element.style.opacity = '0';
+			this.element.style.transition = `all  ${time}s`;	
+		}
+
+		
+		
 	}
 
 
@@ -67,6 +76,10 @@ class MinjQuery {
 
     set setElement(e) {
     	this.element = e ;
+    }
+
+    set setOpacity(o){
+    	this.element.style.opacity = o ;
     }
 
 }
@@ -122,8 +135,8 @@ function test() {
 
 
 	// ===================== hover() ===============================
-	const onHover = () => {
-		console.log("====================== Testing hover() Function ==========================");
+	console.log("====================== Testing hover() Function ==========================");
+	const onHover = () => {	
 		jQueryClass.element.style.cursor  = "not-allowed";
 		console.log(`hovered over ${jQueryClass.element}`);
 	};
@@ -156,10 +169,17 @@ function test() {
 
 	// ===================== fadeToggle() ===============================
 	console.log("====================== Testing fadeToggle() Function ==========================");
+
 	jQueryClass.setElement = document.getElementById('img_wrapper');
+	jQueryClass.fadeToggle(4);
 	console.log(`Changed the class Element to ${jQueryClass.element} `);
 	console.log(`The  ${jQueryClass.element}  should fade out now`);
-	jQueryClass.fadeToggle(7);
+
+
+	jQueryClass.setElement = document.getElementById('img_wrapper_2');
+	jQueryClass.fadeToggle(4);
+	console.log(`Changed the class Element to ${jQueryClass.element} `);
+	console.log(`The  ${jQueryClass.element}  should fade in now`);
 
 }
 
