@@ -129,8 +129,6 @@ function test() {
 	};
 	jQueryClass.hover(onHover);
 	
-
-
 	// ===================== ToggleClass() ===============================
 	console.log("====================== Testing ToggleClass Function ==========================");
 	jQueryClass.addClass("Vampire old-guy great-blood");
@@ -162,12 +160,6 @@ function test() {
 	console.log(`Changed the class Element to ${jQueryClass.element} `);
 	console.log(`The  ${jQueryClass.element}  should fade out now`);
 	jQueryClass.fadeToggle(7);
-
-
-
-
-
-
 
 }
 
