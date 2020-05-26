@@ -56,7 +56,7 @@ li {
 	background-color: rgba(0,0,45,0.2);
 }
 
-/* this space means for all "P"s that are inside h2 do the following style.*/
+/* this space means for all "P"s that are inside h3 do the following style.*/
 
 h3 p {
 	color: rgba(97,97,255,0.2);
