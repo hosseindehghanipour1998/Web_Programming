@@ -1,0 +1,51 @@
+.SignInAlignment {
+	font-family: "Comic Sans MS", cursive, sans-serif ;
+	width: 400px;
+	height: 400px;
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+  	/*box-shadow :0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.backGroundStyle {	
+	background-image: linear-gradient(45deg, #78FFD6, #A8FF78);
+}
+
+.inputStyle {
+	background-color: #01142F ;
+	transition-duration: 0.4s;
+	color: #01142F !important;
+}
+
+.inputStyle:hover{
+  background-image: linear-gradient(89deg,#DEDDF0,#B6BCF2);
+}
+
+.inputStyle:click{
+		background-color: red;
+}
+
+.buttonStyle{
+  border-radius: 12px;
+  background-color: #01142F!important; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid #008CBA;
+}
+
+
+
+.buttonStyle:hover {
+  background-image: linear-gradient(89deg,#3CBA92,#0BA360);
+  color: white;
+}

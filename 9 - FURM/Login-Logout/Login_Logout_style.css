@@ -1,0 +1,66 @@
+
+
+
+
+
+#signup,#login{width:50px;background:##2D1457;}
+#signup{height:50px;} 
+#login{height:100px;}
+.yellow{background-color:gold;}
+
+#buttons{height:100px;}
+#buttons > p {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:15%;
+	float:left;
+	color:white;
+	border-radius: 12px;
+	text-align:center;
+	background-color: purple;
+	height:75%;
+	margin:10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#buttons > p:hover{background-image: linear-gradient(89deg,#3CBA92,#0BA360);color: white;cursor: pointer;}
+#signup > input, #signup > button{margin-top:20px;margin-left:105px;height:25px;border:none;border-radius:2px;}
+
+
+#login > #email,#login > #password,#login >button{width:250px;margin-left:125px !important;margin-top:20px;height:25px;}
+
+
+.MainFrame {
+
+}
+
+
+.FormFrame {
+
+	height: 60%;
+	width: 400px;
+}
+
+.ButtonFrame {
+	display: flex;
+	justify-content : center ;
+	height: 50px;
+	height: 50px;
+	padding: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+.paragraph { 
+	margin-left: 10px;
+	margin-right: 10px;
+ }
+
+.centeralize {
+	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+}
