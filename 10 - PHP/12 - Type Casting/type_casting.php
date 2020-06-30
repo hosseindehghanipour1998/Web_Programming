@@ -31,6 +31,11 @@
     <?php $test2 = 3; ?>
     <?php settype($test1, "string"); ?>
     <?php (string) $test2; ?>
+	<!-- The last casting is a sloppy job ... it doesn't always work. 
+		The $test2 Variable will be casted to String only when it's getting assigned to another variable.
+		So the safest way to cast is by using the settype() function.
+
+	-->
     test1: <?php echo gettype($test1); ?><br />
     test2: <?php echo gettype($test2); ?><br />
     
