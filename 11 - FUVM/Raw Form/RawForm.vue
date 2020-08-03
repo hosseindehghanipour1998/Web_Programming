@@ -38,24 +38,24 @@
 		// Computed Properties
 		computed : {
 		
-		}
+		},
 		
 		// Customized Filters
 		filters : {
 		
-		}
+		},
 		
 		
 		// Customized Directives
 		directives : {
 		
-		}
+		},
 		
 		
 	}
 </script>
 
  
-<style>
+<style scoped>
 
 </style>
